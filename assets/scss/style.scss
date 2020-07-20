@@ -1,11 +1,129 @@
-main {
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  #title {
-    background: red;
-    min-width: 100vw;
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    #title {
+      width: 100vw;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      font-size: 6rem;
+    }
+    #clickUpgrade {
+      display: flex;
+      flex-direction: row;
+      #cookie {
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #cookbtn {
+          width: 15vw;
+          height: auto;
+          padding: 1vw;
+        }
+      }
+      #upgrade {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px grey solid;
+        border-radius: 18rem;
+        margin-right: 2vw;
+        .build1 {
+          background-image: url(/assets/img/field.png);
+          border-radius: 1.2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden;
+        }
+        .build2 {
+          background-image: url(/assets/img/hills.png);
+          border-radius: 1.2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden;
+        }
+        .build3 {
+          background-image: url(/assets/img/mountain.png);
+          border-radius: 1.2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden;
+        }
+        .build4 {
+          background-image: url(/assets/img/dataCenter.png);
+          border-radius: 1.2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden;
+        }
+        .build5 {
+          background-image: url(/assets/img/robotEnv.png);
+          border-radius: 1.2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden;
+        }
+        .build6 {
+          background-image: url(/assets/img/abstract.png);
+          border-radius: 1.2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden;
+        }
+      }
+    }
+    #scoring {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100vw;
+      background: greenyellow;
+    }
   }
-  #
 }
+
