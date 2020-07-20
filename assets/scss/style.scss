@@ -38,7 +38,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 10px grey solid;
+        border: 10px rgba(163, 163, 163, 1) solid;
         background: rgba(91, 207, 208, 1);
         border-radius: 10vw;
         margin-right: 2vw;
@@ -144,7 +144,6 @@ body {
   }
 }
 
-
 // MEDIA QUERIES
 @media only screen and (min-width: 400px) {
   body {
@@ -196,7 +195,7 @@ body {
           }
         }
         #store {
-          border: 5px grey solid;
+          border: 5px rgba(163, 163, 163, 1) solid;
           background: rgba(38, 17, 71, 1);
           border-radius: 3vw;
           padding: 1vw 0;
@@ -244,7 +243,7 @@ body {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          border: 10px grey solid;
+          border: 10px rgba(163, 163, 163, 1) solid;
           background: rgba(38, 17, 71, 1);
           border-radius: 4vw;
           margin-right: 2vw;

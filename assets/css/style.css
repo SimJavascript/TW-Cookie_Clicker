@@ -74,7 +74,7 @@ body {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        border: 10px grey solid;
+        border: 10px #a3a3a3 solid;
         background: #5bcfd0;
         border-radius: 10vw;
         margin-right: 2vw;
@@ -300,7 +300,7 @@ body {
             width: 20vw;
             height: auto; }
         body main #clickUpgrade #store {
-          border: 5px grey solid;
+          border: 5px #a3a3a3 solid;
           background: #261147;
           border-radius: 3vw;
           padding: 1vw 0;
@@ -359,7 +359,7 @@ body {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center;
-          border: 10px grey solid;
+          border: 10px #a3a3a3 solid;
           background: #261147;
           border-radius: 4vw;
           margin-right: 2vw;
