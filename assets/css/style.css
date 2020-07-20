@@ -28,6 +28,37 @@ body {
       text-align: center;
       font-family: 'VT323', monospace;
       font-size: 6rem; }
+    body main #scoring {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding-bottom: 2vh; }
+      body main #scoring article {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 40vw;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 2rem; }
     body main #clickUpgrade {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -48,11 +79,11 @@ body {
             -ms-flex-align: center;
                 align-items: center; }
         body main #clickUpgrade #cookie #cookbtn {
-          width: 15vw;
+          width: 30vw;
           height: auto;
           padding: 1vw; }
       body main #clickUpgrade #upgrade {
-        width: 60vw;
+        width: 40vw;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -66,9 +97,11 @@ body {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        border: 2px grey solid;
-        border-radius: 18rem;
-        margin-right: 2vw; }
+        border: 10px grey solid;
+        background: #5bcfd0;
+        border-radius: 6vw;
+        margin-right: 2vw;
+        padding: 2vw 1vw; }
         body main #clickUpgrade #upgrade .build1 {
           background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
@@ -82,14 +115,15 @@ body {
           -webkit-box-align: start;
               -ms-flex-align: start;
                   align-items: flex-start;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden; }
+          body main #clickUpgrade #upgrade .build1 img {
+            width: 4vw; }
         body main #clickUpgrade #upgrade .build2 {
           background-image: url(/assets/img/hills.png);
           border-radius: 1.2rem;
@@ -103,14 +137,15 @@ body {
           -webkit-box-align: start;
               -ms-flex-align: start;
                   align-items: flex-start;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden; }
+          body main #clickUpgrade #upgrade .build2 img {
+            width: 4vw; }
         body main #clickUpgrade #upgrade .build3 {
           background-image: url(/assets/img/mountain.png);
           border-radius: 1.2rem;
@@ -124,14 +159,15 @@ body {
           -webkit-box-align: start;
               -ms-flex-align: start;
                   align-items: flex-start;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden; }
+          body main #clickUpgrade #upgrade .build3 img {
+            width: 4vw; }
         body main #clickUpgrade #upgrade .build4 {
           background-image: url(/assets/img/dataCenter.png);
           border-radius: 1.2rem;
@@ -145,14 +181,15 @@ body {
           -webkit-box-align: start;
               -ms-flex-align: start;
                   align-items: flex-start;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden; }
+          body main #clickUpgrade #upgrade .build4 img {
+            width: 4vw; }
         body main #clickUpgrade #upgrade .build5 {
           background-image: url(/assets/img/robotEnv.png);
           border-radius: 1.2rem;
@@ -166,14 +203,15 @@ body {
           -webkit-box-align: start;
               -ms-flex-align: start;
                   align-items: flex-start;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden; }
+          body main #clickUpgrade #upgrade .build5 img {
+            width: 3vw; }
         body main #clickUpgrade #upgrade .build6 {
           background-image: url(/assets/img/abstract.png);
           border-radius: 1.2rem;
@@ -187,24 +225,240 @@ body {
           -webkit-box-align: start;
               -ms-flex-align: start;
                   align-items: flex-start;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden; }
-    body main #scoring {
+          body main #clickUpgrade #upgrade .build6 img {
+            width: 4vw; }
+
+@media only screen and (max-width: 400px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    body main {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-      width: 100vw;
-      background: greenyellow; }
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 80vw; }
+      body main #title {
+        width: 100vw;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 2rem; }
+      body main #clickUpgrade {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+        body main #clickUpgrade #cookie {
+          width: 80vw;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          body main #clickUpgrade #cookie #cookbtn {
+            width: 40vw;
+            height: auto;
+            padding: 1vw; }
+        body main #clickUpgrade #upgrade {
+          width: 90vw;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          border: 10px grey solid;
+          background: #5bcfd0;
+          border-radius: 10vw;
+          margin-right: 2vw;
+          padding: 1vw; }
+          body main #clickUpgrade #upgrade .build1 {
+            background-image: url(/assets/img/field.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build1 img {
+              width: 8vw; }
+          body main #clickUpgrade #upgrade .build2 {
+            background-image: url(/assets/img/hills.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build2 img {
+              width: 8vw; }
+          body main #clickUpgrade #upgrade .build3 {
+            background-image: url(/assets/img/mountain.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build3 img {
+              width: 8vw; }
+          body main #clickUpgrade #upgrade .build4 {
+            background-image: url(/assets/img/dataCenter.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build4 img {
+              width: 8vw; }
+          body main #clickUpgrade #upgrade .build5 {
+            background-image: url(/assets/img/robotEnv.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build5 img {
+              width: 5vw; }
+          body main #clickUpgrade #upgrade .build6 {
+            background-image: url(/assets/img/abstract.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build6 img {
+              width: 8vw; }
+      body main #scoring {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        width: 100vw;
+        background: greenyellow; } }
 /*# sourceMappingURL=style.css.map */

@@ -14,6 +14,23 @@ body {
       font-family: 'VT323', monospace;
       font-size: 6rem;
     }
+    #scoring {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-bottom: 2vh;
+      article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 2rem;
+      }
+    }
     #clickUpgrade {
       display: flex;
       flex-direction: row;
@@ -23,32 +40,37 @@ body {
         justify-content: center;
         align-items: center;
         #cookbtn {
-          width: 15vw;
+          width: 30vw;
           height: auto;
           padding: 1vw;
         }
       }
       #upgrade {
-        width: 60vw;
+        width: 40vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 2px grey solid;
-        border-radius: 18rem;
+        border: 10px grey solid;
+        background: rgba(91, 207, 208, 1);
+        border-radius: 6vw;
         margin-right: 2vw;
+        padding: 2vw 1vw;
         .build1 {
           background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          align-items: center;
+          flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden;
+            img {
+            width: 4vw;
+          }
         }
         .build2 {
           background-image: url(/assets/img/hills.png);
@@ -56,12 +78,15 @@ body {
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          align-items: center;
+          flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden;
+            img {
+            width: 4vw;
+          }
         }
         .build3 {
           background-image: url(/assets/img/mountain.png);
@@ -69,12 +94,15 @@ body {
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          align-items: center;
+          flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden;
+            img {
+            width: 4vw;
+          }
         }
         .build4 {
           background-image: url(/assets/img/dataCenter.png);
@@ -82,12 +110,15 @@ body {
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          align-items: center;
+          flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden;
+            img {
+            width: 4vw;
+          }
         }
         .build5 {
           background-image: url(/assets/img/robotEnv.png);
@@ -95,12 +126,15 @@ body {
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          align-items: center;
+          flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden;
+            img {
+            width: 3vw;
+          }
         }
         .build6 {
           background-image: url(/assets/img/abstract.png);
@@ -108,22 +142,172 @@ body {
           display: flex;
           flex-direction: row;
           align-items: flex-start;
-          align-items: center;
+          flex-wrap: wrap;
           margin-top: 1vh;
           padding-left: 1vw;
-          width: 50vw;
-          height: 5vh;
+          width: 40vw;
+          height: 8vh;
           overflow: hidden;
+            img {
+            width: 4vw;
+          }
         }
       }
-    }
-    #scoring {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100vw;
-      background: greenyellow;
     }
   }
 }
 
+// MEDIA QUERIES
+@media only screen and (max-width: 400px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80vw;
+      #title {
+        width: 100vw;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 2rem;
+      }
+      #clickUpgrade {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        #cookie {
+          width: 80vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          #cookbtn {
+            width: 40vw;
+            height: auto;
+            padding: 1vw;
+          }
+        }
+        #upgrade {
+          width: 90vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: 10px grey solid;
+          background: rgba(91, 207, 208, 1);
+          border-radius: 10vw;
+          margin-right: 2vw;
+          padding:1vw;
+          .build1 {
+            background-image: url(/assets/img/field.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden;
+              img {
+              width: 8vw;
+            }
+          }
+          .build2 {
+            background-image: url(/assets/img/hills.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden;
+              img {
+              width: 8vw;
+            }
+          }
+          .build3 {
+            background-image: url(/assets/img/mountain.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden;
+              img {
+              width: 8vw;
+            }
+          }
+          .build4 {
+            background-image: url(/assets/img/dataCenter.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden;
+              img {
+              width: 8vw;
+            }
+          }
+          .build5 {
+            background-image: url(/assets/img/robotEnv.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden;
+              img {
+              width: 5vw;
+            }
+          }
+          .build6 {
+            background-image: url(/assets/img/abstract.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 4vw;
+            width: 85vw;
+            height: 5vh;
+            overflow: hidden;
+              img {
+              width: 8vw;
+            }
+          }
+        }
+      }
+      #scoring {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+        background: greenyellow;
+      }
+    }
+  }
+}
