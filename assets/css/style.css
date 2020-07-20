@@ -1,17 +1,210 @@
-main {
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  main #title {
-    background: red; }
+  body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80vw; }
+    body main #title {
+      width: 100vw;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      font-size: 6rem; }
+    body main #clickUpgrade {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      body main #clickUpgrade #cookie {
+        width: 40vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        body main #clickUpgrade #cookie #cookbtn {
+          width: 15vw;
+          height: auto;
+          padding: 1vw; }
+      body main #clickUpgrade #upgrade {
+        width: 60vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border: 2px grey solid;
+        border-radius: 18rem;
+        margin-right: 2vw; }
+        body main #clickUpgrade #upgrade .build1 {
+          background-image: url(/assets/img/field.png);
+          border-radius: 1.2rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden; }
+        body main #clickUpgrade #upgrade .build2 {
+          background-image: url(/assets/img/hills.png);
+          border-radius: 1.2rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden; }
+        body main #clickUpgrade #upgrade .build3 {
+          background-image: url(/assets/img/mountain.png);
+          border-radius: 1.2rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden; }
+        body main #clickUpgrade #upgrade .build4 {
+          background-image: url(/assets/img/dataCenter.png);
+          border-radius: 1.2rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden; }
+        body main #clickUpgrade #upgrade .build5 {
+          background-image: url(/assets/img/robotEnv.png);
+          border-radius: 1.2rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden; }
+        body main #clickUpgrade #upgrade .build6 {
+          background-image: url(/assets/img/abstract.png);
+          border-radius: 1.2rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin-top: 1vh;
+          padding-left: 1vw;
+          width: 50vw;
+          height: 5vh;
+          overflow: hidden; }
+    body main #scoring {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      width: 100vw;
+      background: greenyellow; }
 /*# sourceMappingURL=style.css.map */
