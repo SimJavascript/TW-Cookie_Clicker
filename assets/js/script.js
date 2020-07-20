@@ -7,96 +7,93 @@ let multiplier = parseInt(localStorage.getItem('multiplier'));
 let multiplierPrice = parseInt(localStorage.getItem('multiplierPrice'));
 let buttonMultiplier = document.getElementById('multiplier');
 
-let autoClickerStatus = parseInt(localStorage.getItem('autoClickerStatus'));
-
 let cows = parseInt(localStorage.getItem('cows'));
+let cowsCost = parseInt(localStorage.getItem('cowsCost'));
 let cow;
 
-update();
+update(); // Update the page with data if exist.
 
-cookie.addEventListener('click', () => {
+cookie.addEventListener('click', () => { // Event cookie.
     ShowScore();
     saveData();
 
 })
 
-buttonMultiplier.addEventListener('click', () => {
-    ShowMultiplier();
-    saveData();
+buttonMultiplier.addEventListener('click', () => { // Event multiplier.
 
-})
+    if (score >= multiplierPrice) {
 
-document.getElementById('store1').addEventListener('click', () => {
+        score -= multiplierPrice + (multiplier + 1);
+        multiplier++;
+        multiplierPrice = multiplierPrice + multiplier * 10;
+        ShowScore();
 
-    if (autoClickerStatus == 0 && score >= 20) {
-        autoClicker();
+        location.reload();
+
     }
     saveData();
 
 })
 
-
-document.getElementById('store2').addEventListener('click', () => {
+document.getElementById('store1').addEventListener('click', () => { // Event store 1 (cow).
 
     clearInterval(cow);
-    if (score >= 20) {
+    if (score >= cowsCost) {
         cows++;
-        score -= 20;
+        score -= cowsCost;
+        cowsCost += cowsCost / 5;
+
         location.reload();
-        
+
     }
+
     saveData();
 
 })
 
-function update() {
+function update() { // Update function to display element on page with data.
 
     getLocalStorage();
     displayOnLoad();
-    ShowAutoClicker();
     ShowCows();
-
-
-    if (autoClickerStatus == 1) {
-        autoClicker();
-    }
+    displayCow();
 
     if (cows > 0) {
         cowFarm();
     }
 
-    function getLocalStorage() { // On récupère les datas.
+    function getLocalStorage() { // Get data from localStorage.
 
         if (localStorage.getItem('scorePlayer') == undefined) {
 
             score = 0;
             multiplier = 1;
-            multiplierPrice = 50;
-            autoClickerStatus = 0;
+            multiplierPrice = 10;
             cows = 0;
+            cowsCost = 20;
 
         }
 
     }
 
-    function displayOnLoad() { // Affichage initial 
+    function displayOnLoad() { //
 
         affichageSCore.innerHTML = score;
         buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
-        document.getElementById('store1').innerHTML = ShowAutoClicker();
+        document.getElementById('store1').innerHTML = ShowCows();
 
     }
 
 }
 
-function ShowScore() { // Affichage du score.
+function ShowScore() {
 
     affichageSCore.innerHTML = calculateScore();
-    buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
+
 
 }
 
-function calculateScore() { // Calcule du score.
+function calculateScore() {
 
     score = score + (1 * multiplier);
     return score;
@@ -105,14 +102,8 @@ function calculateScore() { // Calcule du score.
 
 function ShowMultiplier() { // Affichage du multiplicateur.
 
-    if (score >= multiplierPrice) {
+    buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
 
-        score -= multiplierPrice + (multiplier + 1);
-        multiplier++;
-        multiplierPrice = multiplierPrice + multiplier * 50;
-        ShowScore();
-
-    }
 }
 
 function saveData() { // Sauvegarder les datas.
@@ -120,24 +111,8 @@ function saveData() { // Sauvegarder les datas.
     localStorage.setItem('scorePlayer', score);
     localStorage.setItem('multiplier', multiplier);
     localStorage.setItem('multiplierPrice', multiplierPrice);
-    localStorage.setItem('autoClickerStatus', autoClickerStatus);
     localStorage.setItem('cows', cows);
-
-}
-
-function autoClicker() {
-    autoClickerStatus = 1;
-    let clicker = setInterval(ShowScore, 1000);
-    ShowAutoClicker();
-}
-
-function ShowAutoClicker() { // On check si on a déjà l'autoClicker ou non.
-
-    if (autoClickerStatus) {
-        document.getElementById('store1').innerHTML = `Autoclicker: Active`
-    } else {
-        document.getElementById('store1').innerHTML = `You can buy Autoclicker: Cost 20`
-    }
+    localStorage.setItem('cowsCost', cowsCost);
 
 }
 
@@ -146,19 +121,31 @@ function cowFarm() {
     for (let i = 0; i < cows; i++) {
 
         cow = setInterval(ShowScore, 1000);
-        
-    }
 
+    }
 
 }
 
 function ShowCows() {
 
     if (cows > 0) {
-        document.getElementById('store2').innerHTML = `You have ${cows} cows | Add 1 more : Cost 20`
+        return document.getElementById('store1').innerHTML = `You have ${cows} cows (1cow = 1 clic per second) | Add 1 more for : ${cowsCost}`
+
     } else {
-        document.getElementById('store2').innerHTML = `Add a cow for: Cost 20`
+        return document.getElementById('store1').innerHTML = `Add a cow for: ${cowsCost}`
     }
 
+}
+
+function displayCow() {
+    for (let i = 0; i < cows; i++) {
+
+        let target = document.getElementsByClassName('build1');
+        let imgCow = document.createElement("IMG");
+        imgCow.setAttribute("src", "./assets/img/cow.png");
+        imgCow.setAttribute("width", "50vw");
+        target[0].appendChild(imgCow);
+
+    }
 }
 
