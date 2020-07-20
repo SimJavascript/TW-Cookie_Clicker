@@ -15,11 +15,13 @@ let cow;
 let timeBonus = 10;
 let isBonusActive = false;
 
+window.onunload = () => { saveData(); }; // Save data when user leave the game
+document.getElementById('reset').onclick = () => { resetData(); update(); }; // Reset data
+
 update(); // Update the page with localStorage.
 
 cookie.addEventListener('click', () => {  // Onclick Cookie
-    ShowScore();
-    saveData();
+    showScore();
 })
 buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
 
@@ -29,14 +31,12 @@ buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
         multiplierPrice = multiplierPrice + multiplier * 10;
         location.reload();
     }
-    saveData();
 })
 document.getElementById('tempup').addEventListener('click', () => {  // Onclick Bonus
     if (score >= 200 && isBonusActive == false) {
         score -= 200;
-        Bonus();
+        StartBonus();
     }
-    saveData();
 })
 cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
 
@@ -47,13 +47,12 @@ cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
         cowsCost += cowsCost / 5;
         location.reload();
     }
-    saveData();
 })
 
 function update() { // Update the page with localStorage.
     getLocalStorage();
     displayOnLoad();
-    ShowCows();
+    showCows();
     displayCow();
     if (cows > 0) {
         cowFarm();
@@ -70,7 +69,7 @@ function update() { // Update the page with localStorage.
     function displayOnLoad() { // Display the localStorage.
         affichageSCore.innerHTML = score;
         buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
-        document.getElementById('store1').innerHTML = ShowCows();
+        document.getElementById('store1').innerHTML = showCows();
     }
 }
 
@@ -94,9 +93,17 @@ function saveData() { // Sauvegarder les datas.
     localStorage.setItem('cowsCost', cowsCost);
 }
 
+function resetData() {
+    score = 0;
+    multiplier = 1;
+    multiplierPrice = 10;
+    cows = 0;
+    cowsCost = 20;
+}
+
 function cowFarm() {
     for (let i = 0; i < cows; i++) {
-        cow = setInterval(ShowScore, 1000);
+        cow = setInterval(showScore, 1000);
     }
 }
 
@@ -118,7 +125,7 @@ function displayCow() {
     }
 }
 
-function bonus() {
+function StartBonus() {
     isBonusActive = true;
     timeBonus = 10;
 
@@ -129,8 +136,6 @@ function bonus() {
         function countDown() {
 
             timeBonus--;
-            console.log(timeBonus);
-            console.log(multiplier);
             document.getElementById('tempup').innerHTML = `Bonus is UP ! Everything is +200% | Time left : ${timeBonus}`;
 
             if (timeBonus == 0) {
