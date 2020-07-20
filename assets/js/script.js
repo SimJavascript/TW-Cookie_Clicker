@@ -67,14 +67,14 @@ function update() { // Update the page with localStorage.
             cowsCost = 20;
         }
     }
-    function displayOnLoad() { // Display the localStorage Data.
+    function displayOnLoad() { // Display the localStorage.
         affichageSCore.innerHTML = score;
         buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
         document.getElementById('store1').innerHTML = ShowCows();
     }
 }
 
-function ShowScore() { //
+function showScore() { //
     affichageSCore.innerHTML = calculateScore();
     function calculateScore() {
         score = score + (1 * multiplier);
@@ -82,7 +82,7 @@ function ShowScore() { //
     }
 }
 
-function ShowMultiplier() { // Affichage du multiplicateur.
+function showMultiplier() { // Affichage du multiplicateur.
     buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
 }
 
@@ -100,7 +100,7 @@ function cowFarm() {
     }
 }
 
-function ShowCows() {
+function showCows() {
     if (cows > 0) {
         return document.getElementById('store1').innerHTML = `You have ${cows} cows (1cow = 1 clic per second) | Add 1 more for : ${cowsCost}`
     } else {
@@ -118,7 +118,7 @@ function displayCow() {
     }
 }
 
-function Bonus() {
+function bonus() {
     isBonusActive = true;
     timeBonus = 10;
 
