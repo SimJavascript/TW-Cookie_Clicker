@@ -9,36 +9,59 @@ let buttonMultiplier = document.getElementById('multiplier');
 
 let cows = parseInt(localStorage.getItem('cows'));
 let cowsCost = parseInt(localStorage.getItem('cowsCost'));
+let cowTarget = document.getElementById('store1');
 let cow;
+
+let timeBonus = 10;
+let isBonusActive = false;
 
 update(); // Update the page with data if exist.
 
 cookie.addEventListener('click', () => { // Event cookie.
+
     ShowScore();
     saveData();
+    
 
 })
 
 buttonMultiplier.addEventListener('click', () => { // Event multiplier.
 
-    if (score >= multiplierPrice) {
+    if (score >= multiplierPrice && isBonusActive == false) {
 
-        score -= multiplierPrice + (multiplier + 1);
+        score -= multiplierPrice;
         multiplier++;
         multiplierPrice = multiplierPrice + multiplier * 10;
-        ShowScore();
 
         location.reload();
 
     }
+
     saveData();
+   
+
 
 })
 
-document.getElementById('store1').addEventListener('click', () => { // Event store 1 (cow).
+
+document.getElementById('tempup').addEventListener('click', () => { // tempup multiplier.
+
+    if (score >= 100 && isBonusActive == false) {
+
+        score -= 500;
+        Bonus();
+
+    }
+   
+    saveData();
+    
+
+})
+
+cowTarget.addEventListener('click', () => { // Event store 1 (cow).
 
     clearInterval(cow);
-    if (score >= cowsCost) {
+    if (score >= cowsCost && isBonusActive == false) {
         cows++;
         score -= cowsCost;
         cowsCost += cowsCost / 5;
@@ -48,6 +71,7 @@ document.getElementById('store1').addEventListener('click', () => { // Event sto
     }
 
     saveData();
+   
 
 })
 
@@ -148,3 +172,33 @@ function displayCow() {
 
     }
 }
+
+function Bonus() {
+    isBonusActive = true;
+    timeBonus = 10;
+
+    if (timeBonus == 10) {
+        let bonus = setInterval(countDown, 1000);
+        multiplier *= 3;
+
+        function countDown() {
+
+            timeBonus--;
+            console.log(timeBonus);
+            console.log(multiplier);
+            document.getElementById('tempup').innerHTML = `Bonus is UP ! Everything is +200% | Time left : ${timeBonus}`;
+
+
+            if (timeBonus == 0) {
+                multiplier /= 3;
+                clearInterval(bonus);
+                isBonusActive = false;
+                document.getElementById('tempup').innerHTML = `Buy Bonus (+200% Per Clic For 10 sec) | Cost: 500`;
+            }
+        }
+
+    }
+
+}
+
+
