@@ -129,7 +129,7 @@ function cowFarm() {
 function ShowCows() {
 
     if (cows > 0) {
-        return document.getElementById('store1').innerHTML = `You have ${cows} cows (1cow = 1 clic per second) | Add 1 more for : ${cowsCost}`
+        return document.getElementById('store1').innerHTML = `${cows} cows | +1/sec | Cost : ${cowsCost}`
 
     } else {
         return document.getElementById('store1').innerHTML = `Add a cow for: ${cowsCost}`
@@ -148,4 +148,3 @@ function displayCow() {
 
     }
 }
-

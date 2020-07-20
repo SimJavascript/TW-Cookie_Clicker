@@ -1,3 +1,4 @@
+// Mobile layout
 body {
   display: flex;
   align-items: center;
@@ -12,50 +13,36 @@ body {
       width: 100vw;
       text-align: center;
       font-family: 'VT323', monospace;
-      font-size: 6rem;
-    }
-    #scoring {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding-bottom: 2vh;
-      article {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 40vw;
-        text-align: center;
-        font-family: 'VT323', monospace;
-        font-size: 2rem;
-      }
+      font-size: 2rem;
     }
     #clickUpgrade {
       display: flex;
-      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
       #cookie {
-        width: 40vw;
+        width: 80vw;
         display: flex;
         justify-content: center;
         align-items: center;
         #cookbtn {
-          width: 30vw;
+          width: 40vw;
           height: auto;
           padding: 1vw;
         }
       }
       #upgrade {
-        width: 40vw;
+        width: 90vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border: 10px grey solid;
         background: rgba(91, 207, 208, 1);
-        border-radius: 6vw;
+        border-radius: 10vw;
         margin-right: 2vw;
-        padding: 2vw 1vw;
+        padding:1vw;
         .build1 {
           background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
@@ -64,12 +51,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 1vw;
-          width: 40vw;
-          height: 8vh;
+          padding-left: 4vw;
+          width: 85vw;
+          height: 5vh;
           overflow: hidden;
             img {
-            width: 4vw;
+            width: 8vw;
           }
         }
         .build2 {
@@ -80,12 +67,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 1vw;
-          width: 40vw;
-          height: 8vh;
+          padding-left: 4vw;
+          width: 85vw;
+          height: 5vh;
           overflow: hidden;
             img {
-            width: 4vw;
+            width: 8vw;
           }
         }
         .build3 {
@@ -96,12 +83,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 1vw;
-          width: 40vw;
-          height: 8vh;
+          padding-left: 4vw;
+          width: 85vw;
+          height: 5vh;
           overflow: hidden;
             img {
-            width: 4vw;
+            width: 8vw;
           }
         }
         .build4 {
@@ -112,12 +99,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 1vw;
-          width: 40vw;
-          height: 8vh;
+          padding-left: 4vw;
+          width: 85vw;
+          height: 5vh;
           overflow: hidden;
             img {
-            width: 4vw;
+            width: 8vw;
           }
         }
         .build5 {
@@ -128,12 +115,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 1vw;
-          width: 40vw;
-          height: 8vh;
+          padding-left: 4vw;
+          width: 85vw;
+          height: 5vh;
           overflow: hidden;
             img {
-            width: 3vw;
+            width: 5vw;
           }
         }
         .build6 {
@@ -144,12 +131,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 1vw;
-          width: 40vw;
-          height: 8vh;
+          padding-left: 4vw;
+          width: 85vw;
+          height: 5vh;
           overflow: hidden;
             img {
-            width: 4vw;
+            width: 8vw;
           }
         }
       }
@@ -157,8 +144,9 @@ body {
   }
 }
 
+
 // MEDIA QUERIES
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
   body {
     display: flex;
     align-items: center;
@@ -173,36 +161,94 @@ body {
         width: 100vw;
         text-align: center;
         font-family: 'VT323', monospace;
-        font-size: 2rem;
+        font-size: 6em;
+        padding-right: 35vw;
+      }
+      #scoring {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-bottom: 2vh;
+        article {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 40vw;
+          text-align: center;
+          font-family: 'VT323', monospace;
+          font-size: 3em;
+        }
       }
       #clickUpgrade {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
         #cookie {
-          width: 80vw;
+          width: 30vw;
           display: flex;
           justify-content: center;
           align-items: center;
           #cookbtn {
-            width: 40vw;
+            width: 20vw;
             height: auto;
-            padding: 1vw;
+          }
+        }
+        #store {
+          border: 5px grey solid;
+          background: rgba(38, 17, 71, 1);
+          border-radius: 3vw;
+          padding: 1vw 0;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          .storeBtn {
+            width: 12vw;
+            height: 8vh;
+            margin: 0.5vh 1vw;
+            border: none;
+            border-radius: 4vw;
+            color: #fff;
+            font-size: 2.5em;
+            font-family: 'VT323', monospace;
+          }
+          .store1 {
+            background-image: url(/assets/img/field.png);
+            color: #000;
+          }
+          .store2 {
+            background-image: url(/assets/img/hills.png);
+          }
+          .store3 {
+            background-image: url(/assets/img/mountain.png);
+            color: #000;
+          }
+          .store4 {
+            background-image: url(/assets/img/dataCenter.png);
+          }
+          .store5 {
+            background-image: url(/assets/img/robotEnv.png);
+            color: #000;
+          }
+          .store6 {
+            background-image: url(/assets/img/abstract.png);
           }
         }
         #upgrade {
-          width: 90vw;
+          width: 40vw;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           border: 10px grey solid;
-          background: rgba(91, 207, 208, 1);
-          border-radius: 10vw;
+          background: rgba(38, 17, 71, 1);
+          border-radius: 4vw;
           margin-right: 2vw;
-          padding:1vw;
+          padding: 2vw 1vw;
           .build1 {
             background-image: url(/assets/img/field.png);
             border-radius: 1.2rem;
@@ -211,12 +257,12 @@ body {
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 1vh;
-            padding-left: 4vw;
-            width: 85vw;
-            height: 5vh;
+            padding-left: 1vw;
+            width: 40vw;
+            height: 8vh;
             overflow: hidden;
               img {
-              width: 8vw;
+              width: 2vw;
             }
           }
           .build2 {
@@ -227,12 +273,12 @@ body {
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 1vh;
-            padding-left: 4vw;
-            width: 85vw;
-            height: 5vh;
+            padding-left: 1vw;
+            width: 40vw;
+            height: 8vh;
             overflow: hidden;
               img {
-              width: 8vw;
+              width: 2vw;
             }
           }
           .build3 {
@@ -243,12 +289,12 @@ body {
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 1vh;
-            padding-left: 4vw;
-            width: 85vw;
-            height: 5vh;
+            padding-left: 1vw;
+            width: 40vw;
+            height: 8vh;
             overflow: hidden;
               img {
-              width: 8vw;
+              width: 2vw;
             }
           }
           .build4 {
@@ -259,12 +305,12 @@ body {
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 1vh;
-            padding-left: 4vw;
-            width: 85vw;
-            height: 5vh;
+            padding-left: 1vw;
+            width: 40vw;
+            height: 8vh;
             overflow: hidden;
               img {
-              width: 8vw;
+              width: 2vw;
             }
           }
           .build5 {
@@ -275,12 +321,12 @@ body {
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 1vh;
-            padding-left: 4vw;
-            width: 85vw;
-            height: 5vh;
+            padding-left: 1vw;
+            width: 40vw;
+            height: 8vh;
             overflow: hidden;
               img {
-              width: 5vw;
+              width: 1vw;
             }
           }
           .build6 {
@@ -291,23 +337,19 @@ body {
             align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 1vh;
-            padding-left: 4vw;
-            width: 85vw;
-            height: 5vh;
+            padding-left: 1vw;
+            width: 40vw;
+            height: 8vh;
             overflow: hidden;
               img {
-              width: 8vw;
+              width: 2vw;
             }
           }
         }
       }
-      #scoring {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100vw;
-        background: greenyellow;
-      }
     }
   }
+}
+#tempUpgrade {
+  margin-right: 14vw;
 }
