@@ -147,7 +147,7 @@ function update() { // Update the page with localStorage on page load.
     }
     function displayOnLoad() { // Display the elements innerHTML.
         affichageSCore.innerHTML = score;
-        buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
+        buttonMultiplier.innerHTML = `x${multiplier} Cost: ${multiplierPrice}`;
         document.getElementById('store1').innerHTML = showCows();
         document.getElementById('store2').innerHTML = showLutins();
         document.getElementById('store3').innerHTML = showDwarfs();
@@ -163,7 +163,7 @@ function showScore() { // Show score on innerHTML
 }
 
 function showMultiplier() { // Affichage du multiplicateur.
-    buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
+    buttonMultiplier.innerHTML = `x${multiplier} Cost: ${multiplierPrice}`;
 }
 
 function saveData() { // Sauvegarder les datas.
@@ -255,7 +255,7 @@ function showAvailableUpgrade() {
 
 function showCows() { // Show when the user can buy the item and his price
     if (cows > 0 || score > cowsCost) {
-        return document.getElementById('store1').innerHTML = `+1 cow (-${cowsCost})`
+        return document.getElementById('store1').innerHTML = `+1 Chill Cow (-${cowsCost})`
     } else {
         return document.getElementById('store1').innerHTML = `???`
     }
@@ -263,7 +263,7 @@ function showCows() { // Show when the user can buy the item and his price
 
 function showLutins() { // Show when the user can buy the item and his price
     if (lutins > 0 || score > lutinsCost) {
-        return document.getElementById('store2').innerHTML = `+1 lutin (-${lutinsCost})`
+        return document.getElementById('store2').innerHTML = `+1 Lucky Lutin (-${lutinsCost})`
     } else {
         return document.getElementById('store2').innerHTML = `???`
     }
@@ -271,7 +271,7 @@ function showLutins() { // Show when the user can buy the item and his price
 
 function showDwarfs() { // Show when the user can buy the item and his price
     if (dwarfs > 0 || score > dwarfsCost) {
-        return document.getElementById('store3').innerHTML = `+1 Dwarf (-${dwarfsCost})`
+        return document.getElementById('store3').innerHTML = `+1 Angry Dwarf (-${dwarfsCost})`
     } else {
         return document.getElementById('store3').innerHTML = `???`
     }
@@ -279,7 +279,7 @@ function showDwarfs() { // Show when the user can buy the item and his price
 
 function showHackers() { // Show when the user can buy the item and his price
     if (hackers > 0 || score > hackersCost) {
-        return document.getElementById('store4').innerHTML = `+1 Hacker (-${hackersCost})`
+        return document.getElementById('store4').innerHTML = `+1 Focus Hacker (-${hackersCost})`
     } else {
         return document.getElementById('store4').innerHTML = `???`
     }
@@ -287,7 +287,7 @@ function showHackers() { // Show when the user can buy the item and his price
 
 function showRobots() { // Show when the user can buy the item and his price
     if (robots > 0 || score > robotsCost) {
-        return document.getElementById('store5').innerHTML = `+1 Robot (-${robotsCost})`
+        return document.getElementById('store5').innerHTML = `+1 Mr Robot (-${robotsCost})`
     } else {
         return document.getElementById('store5').innerHTML = `???`
     }

@@ -1,51 +1,68 @@
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  background-image: url(/assets/img/wallMobile.png); }
   body main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 80vw; }
+    max-width: 97vw;
+    max-height: 95vh; }
     body main #title {
-      width: 100vw;
       text-align: center;
       font-family: 'VT323', monospace;
-      font-size: 2rem; }
+      color: #fff;
+      font-size: 3rem; }
+    body main #scoreLineOne {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      color: #fff;
+      font-size: 1.5rem; }
+    body main #scoreLineTwo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      font-size: 1.8rem;
+      color: #52b4b3; }
+      body main #scoreLineTwo article {
+        padding-left: 5vw; }
     body main #clickUpgrade {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+              align-items: center; }
       body main #clickUpgrade #cookie {
-        width: 80vw;
+        margin: 2vw 0;
+        width: 100vw;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -57,10 +74,55 @@ body {
                 align-items: center; }
         body main #clickUpgrade #cookie #cookbtn {
           width: 40vw;
-          height: auto;
-          padding: 1vw; }
+          height: auto; }
+      body main #clickUpgrade #store {
+        border: 5px #a3a3a3 solid;
+        background: #261147;
+        border-radius: 10vw;
+        padding: 1vw 0;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        width: 100vw; }
+        body main #clickUpgrade #store .storeBtn {
+          width: 45vw;
+          margin: 2vw;
+          margin: 0.5vh 1vw;
+          border: none;
+          border-radius: 4vw;
+          color: #fff;
+          font-size: 1.5rem;
+          font-family: 'VT323', monospace; }
+        body main #clickUpgrade #store .store1 {
+          background-image: url(/assets/img/field.png);
+          color: #000; }
+        body main #clickUpgrade #store .store2 {
+          background-image: url(/assets/img/hills.png); }
+        body main #clickUpgrade #store .store3 {
+          background-image: url(/assets/img/mountain.png);
+          color: #000; }
+        body main #clickUpgrade #store .store4 {
+          background-image: url(/assets/img/dataCenter.png); }
+        body main #clickUpgrade #store .store5 {
+          background-image: url(/assets/img/robotEnv.png);
+          color: #000; }
+        body main #clickUpgrade #store .store6 {
+          background-image: url(/assets/img/abstract.png); }
       body main #clickUpgrade #upgrade {
-        width: 90vw;
+        width: 100vw;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -74,13 +136,11 @@ body {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        border: 10px #a3a3a3 solid;
-        background: #5bcfd0;
-        border-radius: 10vw;
-        margin-right: 2vw;
-        padding: 1vw; }
+        border: 5px #a3a3a3 solid;
+        background: #261147;
+        border-radius: 10vw; }
         body main #clickUpgrade #upgrade .build1 {
-          background-image: url("./assets/img/field.png");
+          background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -95,12 +155,12 @@ body {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden; }
           body main #clickUpgrade #upgrade .build1 img {
-            width: 8vw; }
+            width: 7vw; }
         body main #clickUpgrade #upgrade .build2 {
           background-image: url(/assets/img/hills.png);
           border-radius: 1.2rem;
@@ -117,12 +177,12 @@ body {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden; }
           body main #clickUpgrade #upgrade .build2 img {
-            width: 8vw; }
+            width: 6vw; }
         body main #clickUpgrade #upgrade .build3 {
           background-image: url(/assets/img/mountain.png);
           border-radius: 1.2rem;
@@ -139,12 +199,12 @@ body {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden; }
           body main #clickUpgrade #upgrade .build3 img {
-            width: 8vw; }
+            width: 7vw; }
         body main #clickUpgrade #upgrade .build4 {
           background-image: url(/assets/img/dataCenter.png);
           border-radius: 1.2rem;
@@ -161,12 +221,12 @@ body {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden; }
           body main #clickUpgrade #upgrade .build4 img {
-            width: 8vw; }
+            width: 6vw; }
         body main #clickUpgrade #upgrade .build5 {
           background-image: url(/assets/img/robotEnv.png);
           border-radius: 1.2rem;
@@ -183,12 +243,12 @@ body {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden; }
           body main #clickUpgrade #upgrade .build5 img {
-            width: 5vw; }
+            width: 4vw; }
         body main #clickUpgrade #upgrade .build6 {
           background-image: url(/assets/img/abstract.png);
           border-radius: 1.2rem;
@@ -205,14 +265,343 @@ body {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden; }
           body main #clickUpgrade #upgrade .build6 img {
             width: 8vw; }
+    body main #tempUpgrade {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-top: 2vw; }
+      body main #tempUpgrade #tempup {
+        height: 4vh;
+        border: none;
+        border-radius: 2vw;
+        background: #000;
+        color: #fff; }
+      body main #tempUpgrade #reset {
+        margin-top: 2vw;
+        background: #fff;
+        height: 4vh;
+        border: none;
+        border-radius: 2vw;
+        color: red; }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 380px) {
+  body {
+    background-image: url(/assets/img/wallMobile.png); }
+    body main {
+      max-width: 97vw;
+      max-height: 95vh; }
+      body main #title {
+        text-align: center;
+        font-family: 'VT323', monospace;
+        color: #fff;
+        font-size: 3rem; }
+      body main #scoreLineOne {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        color: #fff;
+        font-size: 1.5rem; }
+      body main #scoreLineTwo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 1.8rem;
+        color: #52b4b3; }
+        body main #scoreLineTwo article {
+          padding-left: 5vw; }
+      body main #clickUpgrade {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        body main #clickUpgrade #cookie {
+          margin: 2vw 0;
+          width: 100vw;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          body main #clickUpgrade #cookie #cookbtn {
+            width: 40vw;
+            height: auto; }
+        body main #clickUpgrade #store {
+          border: 5px #a3a3a3 solid;
+          background: #261147;
+          border-radius: 10vw;
+          padding: 1vw 0;
+          text-align: center;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          width: 100vw; }
+          body main #clickUpgrade #store .storeBtn {
+            width: 45vw;
+            margin: 2vw;
+            margin: 0.5vh 1vw;
+            border: none;
+            border-radius: 4vw;
+            color: #fff;
+            font-size: 1.5rem;
+            font-family: 'VT323', monospace; }
+          body main #clickUpgrade #store .store1 {
+            background-image: url(/assets/img/field.png);
+            color: #000; }
+          body main #clickUpgrade #store .store2 {
+            background-image: url(/assets/img/hills.png); }
+          body main #clickUpgrade #store .store3 {
+            background-image: url(/assets/img/mountain.png);
+            color: #000; }
+          body main #clickUpgrade #store .store4 {
+            background-image: url(/assets/img/dataCenter.png); }
+          body main #clickUpgrade #store .store5 {
+            background-image: url(/assets/img/robotEnv.png);
+            color: #000; }
+          body main #clickUpgrade #store .store6 {
+            background-image: url(/assets/img/abstract.png); }
+        body main #clickUpgrade #upgrade {
+          width: 100vw;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          border: 5px #a3a3a3 solid;
+          background: #261147;
+          border-radius: 10vw; }
+          body main #clickUpgrade #upgrade .build1 {
+            background-image: url(/assets/img/field.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build1 img {
+              width: 7vw; }
+          body main #clickUpgrade #upgrade .build2 {
+            background-image: url(/assets/img/hills.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build2 img {
+              width: 6vw; }
+          body main #clickUpgrade #upgrade .build3 {
+            background-image: url(/assets/img/mountain.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build3 img {
+              width: 7vw; }
+          body main #clickUpgrade #upgrade .build4 {
+            background-image: url(/assets/img/dataCenter.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build4 img {
+              width: 6vw; }
+          body main #clickUpgrade #upgrade .build5 {
+            background-image: url(/assets/img/robotEnv.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build5 img {
+              width: 4vw; }
+          body main #clickUpgrade #upgrade .build6 {
+            background-image: url(/assets/img/abstract.png);
+            border-radius: 1.2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden; }
+            body main #clickUpgrade #upgrade .build6 img {
+              width: 7vw; }
+      body main #tempUpgrade {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 2vw; }
+        body main #tempUpgrade #tempup {
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          background: #000;
+          color: #fff; }
+        body main #tempUpgrade #reset {
+          margin-top: 2vw;
+          background: #fff;
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          color: red; } }
+
+@media only screen and (min-width: 1024px) {
   body {
     display: -webkit-box;
     display: -ms-flexbox;

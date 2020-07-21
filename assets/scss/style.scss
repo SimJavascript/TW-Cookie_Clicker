@@ -1,62 +1,121 @@
-// Mobile layout
+// Mobile-First Layout
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: url(/assets/img/wallMobile.png);
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
+    max-width: 97vw;
+    max-height: 95vh;
     #title {
-      width: 100vw;
       text-align: center;
       font-family: 'VT323', monospace;
-      font-size: 2rem;
+      color: #fff;
+      font-size: 3rem;
+    }
+    #scoreLineOne{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    #scoreLineTwo{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      font-size: 1.8rem;
+      color: rgba(82, 180, 179, 1);
+      article {
+        padding-left: 5vw;
+      }
     }
     #clickUpgrade {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      flex-wrap: wrap;
       #cookie {
-        width: 80vw;
+        margin: 2vw 0;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
         #cookbtn {
           width: 40vw;
           height: auto;
-          padding: 1vw;
+        }
+      }
+      #store {
+        border: 5px rgba(163, 163, 163, 1) solid;
+        background: rgba(38, 17, 71, 1);
+        border-radius: 10vw;
+        padding: 1vw 0;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100vw;
+        .storeBtn {
+          width: 45vw;
+          margin: 2vw;
+          margin: 0.5vh 1vw;
+          border: none;
+          border-radius: 4vw;
+          color: #fff;
+          font-size: 1.5rem;
+          font-family: 'VT323', monospace;
+        }
+        .store1 {
+          background-image: url(/assets/img/field.png);
+          color: #000;
+        }
+        .store2 {
+          background-image: url(/assets/img/hills.png);
+        }
+        .store3 {
+          background-image: url(/assets/img/mountain.png);
+          color: #000;
+        }
+        .store4 {
+          background-image: url(/assets/img/dataCenter.png);
+        }
+        .store5 {
+          background-image: url(/assets/img/robotEnv.png);
+          color: #000;
+        }
+        .store6 {
+          background-image: url(/assets/img/abstract.png);
         }
       }
       #upgrade {
-        width: 90vw;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 10px rgba(163, 163, 163, 1) solid;
-        background: rgba(91, 207, 208, 1);
+        border: 5px rgba(163, 163, 163, 1) solid;
+        background: rgba(38, 17, 71, 1);
         border-radius: 10vw;
-        margin-right: 2vw;
-        padding:1vw;
         .build1 {
-          background-image: url('./assets/img/field.png');
+          background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden;
             img {
-            width: 8vw;
+            width: 7vw;
           }
         }
         .build2 {
@@ -67,12 +126,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden;
             img {
-            width: 8vw;
+            width: 6vw;
           }
         }
         .build3 {
@@ -83,12 +142,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden;
             img {
-            width: 8vw;
+            width: 7vw;
           }
         }
         .build4 {
@@ -99,12 +158,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden;
             img {
-            width: 8vw;
+            width: 6vw;
           }
         }
         .build5 {
@@ -115,12 +174,12 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden;
             img {
-            width: 5vw;
+            width: 4vw;
           }
         }
         .build6 {
@@ -131,9 +190,9 @@ body {
           align-items: flex-start;
           flex-wrap: wrap;
           margin-top: 1vh;
-          padding-left: 4vw;
-          width: 85vw;
-          height: 5vh;
+          padding-left: 1vw;
+          width: 94vw;
+          height: 4vh;
           overflow: hidden;
             img {
             width: 8vw;
@@ -141,11 +200,267 @@ body {
         }
       }
     }
+    #tempUpgrade {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 2vw;
+      #tempup {
+        height: 4vh;
+        border: none;
+        border-radius: 2vw;
+        background: #000;
+        color:#fff;
+      }
+      #reset {
+        margin-top: 2vw;
+        background: #fff;
+        height: 4vh;
+        border: none;
+        border-radius: 2vw;
+        color: red;
+      }
+    }
   }
 }
 
+
+
+
 // MEDIA QUERIES
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 380px) {
+  body {
+    background-image: url(/assets/img/wallMobile.png);
+    main {
+      max-width: 97vw;
+      max-height: 95vh;
+      #title {
+        text-align: center;
+        font-family: 'VT323', monospace;
+        color: #fff;
+        font-size: 3rem;
+      }
+      #scoreLineOne{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+      #scoreLineTwo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 1.8rem;
+        color: rgba(82, 180, 179, 1);
+        article {
+          padding-left: 5vw;
+        }
+      }
+      #clickUpgrade {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #cookie {
+          margin: 2vw 0;
+          width: 100vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          #cookbtn {
+            width: 40vw;
+            height: auto;
+          }
+        }
+        #store {
+          border: 5px rgba(163, 163, 163, 1) solid;
+          background: rgba(38, 17, 71, 1);
+          border-radius: 10vw;
+          padding: 1vw 0;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 100vw;
+          .storeBtn {
+            width: 45vw;
+            margin: 2vw;
+            margin: 0.5vh 1vw;
+            border: none;
+            border-radius: 4vw;
+            color: #fff;
+            font-size: 1.5rem;
+            font-family: 'VT323', monospace;
+          }
+          .store1 {
+            background-image: url(/assets/img/field.png);
+            color: #000;
+          }
+          .store2 {
+            background-image: url(/assets/img/hills.png);
+          }
+          .store3 {
+            background-image: url(/assets/img/mountain.png);
+            color: #000;
+          }
+          .store4 {
+            background-image: url(/assets/img/dataCenter.png);
+          }
+          .store5 {
+            background-image: url(/assets/img/robotEnv.png);
+            color: #000;
+          }
+          .store6 {
+            background-image: url(/assets/img/abstract.png);
+          }
+        }
+        #upgrade {
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: 5px rgba(163, 163, 163, 1) solid;
+          background: rgba(38, 17, 71, 1);
+          border-radius: 10vw;
+          .build1 {
+            background-image: url(/assets/img/field.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 7vw;
+            }
+          }
+          .build2 {
+            background-image: url(/assets/img/hills.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 6vw;
+            }
+          }
+          .build3 {
+            background-image: url(/assets/img/mountain.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 7vw;
+            }
+          }
+          .build4 {
+            background-image: url(/assets/img/dataCenter.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 6vw;
+            }
+          }
+          .build5 {
+            background-image: url(/assets/img/robotEnv.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 4vw;
+            }
+          }
+          .build6 {
+            background-image: url(/assets/img/abstract.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 7vw;
+            }
+          }
+        }
+      }
+      #tempUpgrade {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2vw;
+        #tempup {
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          background: #000;
+          color:#fff;
+        }
+        #reset {
+          margin-top: 2vw;
+          background: #fff;
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) {
   body {
     display: flex;
     align-items: center;
