@@ -48,12 +48,6 @@ update(); // Update the page with localStorage.
 
 cookie.addEventListener('click', () => {  // Onclick Cookie
     showScore();
-    showCows();
-    showLutins();
-    showDwarfs();
-    showHackers();
-    showRobots();
-    showTorvalds();
     saveData();                           // Save data on each click
 })
 buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
@@ -165,6 +159,7 @@ function update() { // Update the page with localStorage on page load.
 
 function showScore() { // Show score on innerHTML
     affichageSCore.innerHTML = score = score + (1 * multiplier);
+    showAvailableUpgrade();
 }
 
 function showMultiplier() { // Affichage du multiplicateur.
@@ -246,6 +241,16 @@ function startFarm() {
             torvald = setInterval(showScore, 1);
         }
     }
+}
+
+function showAvailableUpgrade() {
+
+    showCows();
+    showLutins();
+    showDwarfs();
+    showHackers();
+    showRobots();
+    showTorvalds();
 }
 
 function showCows() { // Show when the user can buy the item and his price
