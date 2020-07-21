@@ -80,7 +80,7 @@ body {
         margin-right: 2vw;
         padding: 1vw; }
         body main #clickUpgrade #upgrade .build1 {
-          background-image: url(/assets/img/field.png);
+          background-image: url(./assets/img/field.png);
           border-radius: 1.2rem;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -102,7 +102,7 @@ body {
           body main #clickUpgrade #upgrade .build1 img {
             width: 8vw; }
         body main #clickUpgrade #upgrade .build2 {
-          background-image: url(/assets/img/hills.png);
+          background-image: url(./assets/img/hills.png);
           border-radius: 1.2rem;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -124,7 +124,7 @@ body {
           body main #clickUpgrade #upgrade .build2 img {
             width: 8vw; }
         body main #clickUpgrade #upgrade .build3 {
-          background-image: url(/assets/img/mountain.png);
+          background-image: url(./assets/img/mountain.png);
           border-radius: 1.2rem;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -146,7 +146,7 @@ body {
           body main #clickUpgrade #upgrade .build3 img {
             width: 8vw; }
         body main #clickUpgrade #upgrade .build4 {
-          background-image: url(/assets/img/dataCenter.png);
+          background-image: url(./assets/img/dataCenter.png);
           border-radius: 1.2rem;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -168,7 +168,7 @@ body {
           body main #clickUpgrade #upgrade .build4 img {
             width: 8vw; }
         body main #clickUpgrade #upgrade .build5 {
-          background-image: url(/assets/img/robotEnv.png);
+          background-image: url(./assets/img/robotEnv.png);
           border-radius: 1.2rem;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -190,7 +190,7 @@ body {
           body main #clickUpgrade #upgrade .build5 img {
             width: 5vw; }
         body main #clickUpgrade #upgrade .build6 {
-          background-image: url(/assets/img/abstract.png);
+          background-image: url(./assets/img/abstract.png);
           border-radius: 1.2rem;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -330,20 +330,20 @@ body {
             font-size: 2.5em;
             font-family: 'VT323', monospace; }
           body main #clickUpgrade #store .store1 {
-            background-image: url(/assets/img/field.png);
+            background-image: url(./assets/img/field.png);
             color: #000; }
           body main #clickUpgrade #store .store2 {
-            background-image: url(/assets/img/hills.png); }
+            background-image: url(./assets/img/hills.png); }
           body main #clickUpgrade #store .store3 {
-            background-image: url(/assets/img/mountain.png);
+            background-image: url(./assets/img/mountain.png);
             color: #000; }
           body main #clickUpgrade #store .store4 {
-            background-image: url(/assets/img/dataCenter.png); }
+            background-image: url(./assets/img/dataCenter.png); }
           body main #clickUpgrade #store .store5 {
-            background-image: url(/assets/img/robotEnv.png);
+            background-image: url(./assets/img/robotEnv.png);
             color: #000; }
           body main #clickUpgrade #store .store6 {
-            background-image: url(/assets/img/abstract.png); }
+            background-image: url(./assets/img/abstract.png); }
         body main #clickUpgrade #upgrade {
           width: 40vw;
           display: -webkit-box;
@@ -365,7 +365,7 @@ body {
           margin-right: 2vw;
           padding: 2vw 1vw; }
           body main #clickUpgrade #upgrade .build1 {
-            background-image: url(/assets/img/field.png);
+            background-image: url(./assets/img/field.png);
             border-radius: 1.2rem;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -387,7 +387,7 @@ body {
             body main #clickUpgrade #upgrade .build1 img {
               width: 2vw; }
           body main #clickUpgrade #upgrade .build2 {
-            background-image: url(/assets/img/hills.png);
+            background-image: url(./assets/img/hills.png);
             border-radius: 1.2rem;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -409,7 +409,7 @@ body {
             body main #clickUpgrade #upgrade .build2 img {
               width: 2vw; }
           body main #clickUpgrade #upgrade .build3 {
-            background-image: url(/assets/img/mountain.png);
+            background-image: url(./assets/img/mountain.png);
             border-radius: 1.2rem;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -431,7 +431,7 @@ body {
             body main #clickUpgrade #upgrade .build3 img {
               width: 2vw; }
           body main #clickUpgrade #upgrade .build4 {
-            background-image: url(/assets/img/dataCenter.png);
+            background-image: url(./assets/img/dataCenter.png);
             border-radius: 1.2rem;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -453,7 +453,7 @@ body {
             body main #clickUpgrade #upgrade .build4 img {
               width: 2vw; }
           body main #clickUpgrade #upgrade .build5 {
-            background-image: url(/assets/img/robotEnv.png);
+            background-image: url(./assets/img/robotEnv.png);
             border-radius: 1.2rem;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -475,7 +475,7 @@ body {
             body main #clickUpgrade #upgrade .build5 img {
               width: 1vw; }
           body main #clickUpgrade #upgrade .build6 {
-            background-image: url(/assets/img/abstract.png);
+            background-image: url(./assets/img/abstract.png);
             border-radius: 1.2rem;
             display: -webkit-box;
             display: -ms-flexbox;
