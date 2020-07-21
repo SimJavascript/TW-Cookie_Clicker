@@ -17,6 +17,11 @@ let lutinsCost = parseInt(localStorage.getItem('lutinsCost'));
 let lutinTarget = document.getElementById('store2');
 let lutin;
 
+let dwarfs = parseInt(localStorage.getItem('dwarfs'));
+let dwarfsCost = parseInt(localStorage.getItem('dwarfsCost'));
+let dwarfsTarget = document.getElementById('store3');
+let dwarf;
+
 let timeBonus = 10;
 let isBonusActive = false;
 
@@ -28,6 +33,7 @@ cookie.addEventListener('click', () => {  // Onclick Cookie
     showScore();
     showCows();
     showLutins();
+    showDwarfs();
     saveData();                           // Save data on each click
 })
 buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
@@ -64,6 +70,16 @@ lutinTarget.addEventListener('click', () => { // Onclick store 2 (lutin).
     }
 })
 
+dwarfTarget.addEventListener('click', () => { // Onclick store 3 (dwarf).
+    clearInterval(dwarf);
+    if (score >= dwarfsCost && isBonusActive == false) { // Check if the player has enough score to buy the dwarf.
+        dwarfs++;
+        score -= dwarfsCost;
+        dwarfsCost += dwarfsCost / 5;
+        location.reload();
+    }
+})
+
 function update() { // Update the page with localStorage on page load.
     getLocalStorage(); // Get data from localStorage.
     displayOnLoad();
@@ -79,6 +95,8 @@ function update() { // Update the page with localStorage on page load.
             cowsCost = 20;
             lutins = 0;
             lutinsCost = 50;
+            dwarfs = 0;
+            dwarfsCost = 50;
         }
     }
     function displayOnLoad() { // Display the elements innerHTML.
@@ -86,6 +104,7 @@ function update() { // Update the page with localStorage on page load.
         buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
         document.getElementById('store1').innerHTML = showCows();
         document.getElementById('store2').innerHTML = showLutins();
+        document.getElementById('stor3').innerHTML = showDwarfs();
     }
 }
 
@@ -105,6 +124,8 @@ function saveData() { // Sauvegarder les datas.
     localStorage.setItem('cowsCost', cowsCost);
     localStorage.setItem('lutins', lutins);
     localStorage.setItem('lutinsCost', lutinsCost);
+    localStorage.setItem('dwarfs', dwarfs);
+    localStorage.setItem('dwarfsCost', dwarfsCost);
 }
 
 function resetData() { // Reset all the data and reload the page.
@@ -115,6 +136,8 @@ function resetData() { // Reset all the data and reload the page.
     cowsCost = 20;
     lutins = 0;
     lutinsCost = 50;
+    dwarfs = 0;
+    dwarfsCost = 50;
     saveData();
     location.reload();
 }
@@ -129,6 +152,12 @@ function startFarm() {
     if (lutins > 0) {
         for (let i = 0; i < lutins; i++) {
             lutin = setInterval(showScore, 500);
+        }
+    }
+
+    if (dwarfs > 0) {
+        for (let i = 0; i < dwarfs; i++) {
+            dwarf = setInterval(showScore, 500);
         }
     }
 }
@@ -149,6 +178,14 @@ function showLutins() { // Show when the user can buy the item and his price
     }
 }
 
+function showDwarfs() { // Show when the user can buy the item and his price
+    if (dwarfs > 0 || score > dwarfsCost) {
+        return document.getElementById('store3').innerHTML = `+1 Dawrf (-${dwarfsCost})`
+    } else {
+        return document.getElementById('store3').innerHTML = `???`
+    }
+}
+
 function displayBuild() { // Add the item img to the build.
 
     for (let i = 0; i < cows; i++) {
@@ -165,6 +202,14 @@ function displayBuild() { // Add the item img to the build.
         imgLutin.setAttribute("src", "./assets/img/lutin.png");
         imgLutin.setAttribute("width", "50vw");
         target[0].appendChild(imgLutin);
+    }
+
+    for (let i = 0; i < dwarfs; i++) {
+        let target = document.getElementsByClassName('build3');
+        let imgDwarf = document.createElement("IMG");
+        imgDwarf.setAttribute("src", "./assets/img/dwarf.png");
+        imgDwarf.setAttribute("width", "50vw");
+        target[0].appendChild(imgDwarf);
     }
 }
 
