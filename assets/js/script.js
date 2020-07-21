@@ -1,3 +1,4 @@
+// VARIBLES
 let cookie = document.getElementById('cookbtn');
 
 let affichageSCore = document.getElementById('score');
@@ -17,9 +18,30 @@ let lutinsCost = parseInt(localStorage.getItem('lutinsCost'));
 let lutinTarget = document.getElementById('store2');
 let lutin;
 
+let dwarfs = parseInt(localStorage.getItem('dwarfs'));
+let dwarfsCost = parseInt(localStorage.getItem('dwarfsCost'));
+let dwarfTarget = document.getElementById('store3');
+let dwarf;
+
+let hackers = parseInt(localStorage.getItem('hackers'));
+let hackersCost = parseInt(localStorage.getItem('hackersCost'));
+let hackerTarget = document.getElementById('store4');
+let hacker;
+
+let robots = parseInt(localStorage.getItem('robots'));
+let robotsCost = parseInt(localStorage.getItem('robotsCost'));
+let robotTarget = document.getElementById('store5');
+let robot;
+
+let torvalds = parseInt(localStorage.getItem('torvalds'));
+let torvaldsCost = parseInt(localStorage.getItem('torvaldsCost'));
+let torvaldTarget = document.getElementById('store6');
+let torvald;
+
 let timeBonus = 10;
 let isBonusActive = false;
 
+// SAVING DATA
 window.onunload = () => { saveData(); }; // Save data when user leave the game
 document.getElementById('reset').onclick = () => { resetData(); update(); }; // Reset data
 update(); // Update the page with localStorage.
@@ -28,6 +50,10 @@ cookie.addEventListener('click', () => {  // Onclick Cookie
     showScore();
     showCows();
     showLutins();
+    showDwarfs();
+    showHackers();
+    showRobots();
+    showTorvalds();
     saveData();                           // Save data on each click
 })
 buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
@@ -53,7 +79,6 @@ cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
         location.reload();
     }
 })
-
 lutinTarget.addEventListener('click', () => { // Onclick store 2 (lutin).
     clearInterval(lutin);
     if (score >= lutinsCost && isBonusActive == false) { // Check if the player has enough score to buy the lutin.
@@ -63,7 +88,44 @@ lutinTarget.addEventListener('click', () => { // Onclick store 2 (lutin).
         location.reload();
     }
 })
+dwarfTarget.addEventListener('click', () => { // Onclick store 3 (dwarf).
+    clearInterval(dwarf);
+    if (score >= dwarfsCost && isBonusActive == false) { // Check if the player has enough score to buy the dwarf.
+        dwarfs++;
+        score -= dwarfsCost;
+        dwarfsCost += dwarfsCost / 5;
+        location.reload();
+    }
+})
+hackerTarget.addEventListener('click', () => { // Onclick store 3 (hacker).
+    clearInterval(hacker);
+    if (score >= hackersCost && isBonusActive == false) { // Check if the player has enough score to buy the hacker.
+        hackers++;
+        score -= hackersCost;
+        hackersCost += hackersCost / 5;
+        location.reload();
+    }
+})
+robotTarget.addEventListener('click', () => { // Onclick store 3 (robot).
+    clearInterval(robot);
+    if (score >= robotsCost && isBonusActive == false) { // Check if the player has enough score to buy the robot.
+        robots++;
+        score -= robotsCost;
+        robotsCost += robotsCost / 5;
+        location.reload();
+    }
+})
+torvaldTarget.addEventListener('click', () => { // Onclick store 3 (robot).
+    clearInterval(torvald);
+    if (score >= torvaldsCost && isBonusActive == false) { // Check if the player has enough score to buy the Torvald.
+        torvalds++;
+        score -= torvaldsCost;
+        robotsCost += torvaldsCost / 5;
+        location.reload();
+    }
+})
 
+// UPDATE DATA
 function update() { // Update the page with localStorage on page load.
     getLocalStorage(); // Get data from localStorage.
     displayOnLoad();
@@ -79,6 +141,14 @@ function update() { // Update the page with localStorage on page load.
             cowsCost = 20;
             lutins = 0;
             lutinsCost = 50;
+            dwarfs = 0;
+            dwarfsCost = 100;
+            hackers = 0;
+            hackersCost = 500;
+            robots = 0;
+            robotsCost = 1000;
+            torvalds = 0;
+            torvaldsCost = 50000;
         }
     }
     function displayOnLoad() { // Display the elements innerHTML.
@@ -86,6 +156,10 @@ function update() { // Update the page with localStorage on page load.
         buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
         document.getElementById('store1').innerHTML = showCows();
         document.getElementById('store2').innerHTML = showLutins();
+        document.getElementById('store3').innerHTML = showDwarfs();
+        document.getElementById('store4').innerHTML = showHackers();
+        document.getElementById('store5').innerHTML = showRobots();
+        document.getElementById('store6').innerHTML = showTorvalds();
     }
 }
 
@@ -105,8 +179,17 @@ function saveData() { // Sauvegarder les datas.
     localStorage.setItem('cowsCost', cowsCost);
     localStorage.setItem('lutins', lutins);
     localStorage.setItem('lutinsCost', lutinsCost);
+    localStorage.setItem('dwarfs', dwarfs);
+    localStorage.setItem('dwarfsCost', dwarfsCost);
+    localStorage.setItem('hackers', hackers);
+    localStorage.setItem('hackersCost', hackersCost);
+    localStorage.setItem('robots', robots);
+    localStorage.setItem('robotsCost', robotsCost);
+    localStorage.setItem('torvalds', torvalds);
+    localStorage.setItem('torvaldsCost', torvaldsCost);
 }
 
+//  RESET DATA
 function resetData() { // Reset all the data and reload the page.
     score = 0;
     multiplier = 1;
@@ -115,6 +198,14 @@ function resetData() { // Reset all the data and reload the page.
     cowsCost = 20;
     lutins = 0;
     lutinsCost = 50;
+    dwarfs = 0;
+    dwarfsCost = 100;
+    hackers = 0;
+    hackersCost = 500;
+    robots = 0;
+    robotsCost = 1000;
+    torvalds = 0;
+    torvaldsCost = 50000;
     saveData();
     location.reload();
 }
@@ -128,7 +219,31 @@ function startFarm() {
 
     if (lutins > 0) {
         for (let i = 0; i < lutins; i++) {
-            lutin = setInterval(showScore, 500);
+            lutin = setInterval(showScore, 750);
+        }
+    }
+
+    if (dwarfs > 0) {
+        for (let i = 0; i < dwarfs; i++) {
+            dwarf = setInterval(showScore, 500);
+        }
+    }
+
+    if (hackers > 0) {
+        for (let i = 0; i < hackers; i++) {
+            hacker = setInterval(showScore, 250);
+        }
+    }
+
+    if (robots > 0) {
+        for (let i = 0; i < robots; i++) {
+            robot = setInterval(showScore, 100);
+        }
+    }
+
+    if (torvalds > 0) {
+        for (let i = 0; i < torvalds; i++) {
+            torvald = setInterval(showScore, 1);
         }
     }
 }
@@ -149,6 +264,38 @@ function showLutins() { // Show when the user can buy the item and his price
     }
 }
 
+function showDwarfs() { // Show when the user can buy the item and his price
+    if (dwarfs > 0 || score > dwarfsCost) {
+        return document.getElementById('store3').innerHTML = `+1 Dwarf (-${dwarfsCost})`
+    } else {
+        return document.getElementById('store3').innerHTML = `???`
+    }
+}
+
+function showHackers() { // Show when the user can buy the item and his price
+    if (hackers > 0 || score > hackersCost) {
+        return document.getElementById('store4').innerHTML = `+1 Hacker (-${hackersCost})`
+    } else {
+        return document.getElementById('store4').innerHTML = `???`
+    }
+}
+
+function showRobots() { // Show when the user can buy the item and his price
+    if (robots > 0 || score > robotsCost) {
+        return document.getElementById('store5').innerHTML = `+1 Robot (-${robotsCost})`
+    } else {
+        return document.getElementById('store5').innerHTML = `???`
+    }
+}
+
+function showTorvalds() { // Show when the user can buy the item and his price
+    if (torvalds > 0 || score > torvaldsCost) {
+        return document.getElementById('store6').innerHTML = `+1 Torvald (-${torvaldsCost})`
+    } else {
+        return document.getElementById('store6').innerHTML = `???`
+    }
+}
+
 function displayBuild() { // Add the item img to the build.
 
     for (let i = 0; i < cows; i++) {
@@ -156,6 +303,7 @@ function displayBuild() { // Add the item img to the build.
         let imgCow = document.createElement("IMG");
         imgCow.setAttribute("src", "./assets/img/cow.png");
         imgCow.setAttribute("width", "50vw");
+        imgCow.setAttribute("alt", "cow");
         target[0].appendChild(imgCow);
     }
 
@@ -164,7 +312,44 @@ function displayBuild() { // Add the item img to the build.
         let imgLutin = document.createElement("IMG");
         imgLutin.setAttribute("src", "./assets/img/lutin.png");
         imgLutin.setAttribute("width", "50vw");
+        imgLutin.setAttribute("alt", "lutin");
         target[0].appendChild(imgLutin);
+    }
+
+    for (let i = 0; i < dwarfs; i++) {
+        let target = document.getElementsByClassName('build3');
+        let imgDwarf = document.createElement("IMG");
+        imgDwarf.setAttribute("src", "./assets/img/dwarf.png");
+        imgDwarf.setAttribute("width", "50vw");
+        imgDwarf.setAttribute("alt", "dwarf");
+        target[0].appendChild(imgDwarf);
+    }
+
+    for (let i = 0; i < hackers; i++) {
+        let target = document.getElementsByClassName('build4');
+        let imgHacker = document.createElement("IMG");
+        imgHacker.setAttribute("src", "./assets/img/hacker.png");
+        imgHacker.setAttribute("width", "50vw");
+        imgHacker.setAttribute("alt", "hacker");
+        target[0].appendChild(imgHacker);
+    }
+
+    for (let i = 0; i < robots; i++) {
+        let target = document.getElementsByClassName('build5');
+        let imgRobot = document.createElement("IMG");
+        imgRobot.setAttribute("src", "./assets/img/robot.png");
+        imgRobot.setAttribute("width", "50vw");
+        imgRobot.setAttribute("alt", "robot");
+        target[0].appendChild(imgRobot);
+    }
+
+    for (let i = 0; i < torvalds; i++) {
+        let target = document.getElementsByClassName('build6');
+        let imgTorvald = document.createElement("IMG");
+        imgTorvald.setAttribute("src", "./assets/img/torvald.png");
+        imgTorvald.setAttribute("width", "50vw");
+        imgTorvald.setAttribute("alt", "torvald");
+        target[0].appendChild(imgTorvald);
     }
 }
 
