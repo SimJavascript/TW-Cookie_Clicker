@@ -49,6 +49,17 @@ cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
     }
 })
 
+cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
+
+    clearInterval(cow);
+    if (score >= cowsCost && isBonusActive == false) {
+        cows++;
+        score -= cowsCost;
+        cowsCost += cowsCost / 5;
+        location.reload();
+    }
+})
+
 function update() { // Update the page with localStorage.
     getLocalStorage();
     displayOnLoad();
@@ -109,8 +120,7 @@ function cowFarm() {
 
 function showCows() {
     if (cows > 0) {
-        return document.getElementById('store1').innerHTML = `${cows} cows | +1/sec | Cost : ${cowsCost}`
-
+        return document.getElementById('store1').innerHTML = `Cow cost: ${cowsCost}`
     } else {
         return document.getElementById('store1').innerHTML = `Add a cow for: ${cowsCost}`
     }
@@ -148,5 +158,3 @@ function StartBonus() {
         }
     }
 }
-
-
