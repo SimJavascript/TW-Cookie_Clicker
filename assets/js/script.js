@@ -12,20 +12,26 @@ let cowsCost = parseInt(localStorage.getItem('cowsCost'));
 let cowTarget = document.getElementById('store1');
 let cow;
 
+let lutins = parseInt(localStorage.getItem('lutins'));
+let lutinsCost = parseInt(localStorage.getItem('lutinsCost'));
+let lutinTarget = document.getElementById('store2');
+let lutin;
+
 let timeBonus = 10;
 let isBonusActive = false;
 
 window.onunload = () => { saveData(); }; // Save data when user leave the game
 document.getElementById('reset').onclick = () => { resetData(); update(); }; // Reset data
-
 update(); // Update the page with localStorage.
 
 cookie.addEventListener('click', () => {  // Onclick Cookie
     showScore();
+    showCows();
+    showLutins();
+    saveData();                           // Save data on each click
 })
 buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
-
-    if (score >= multiplierPrice && isBonusActive == false) {
+    if (score >= multiplierPrice && isBonusActive == false) { // Check if the player has enough score to buy the multiplier.
         score -= multiplierPrice;
         multiplier++;
         multiplierPrice = multiplierPrice + multiplier * 10;
@@ -33,15 +39,14 @@ buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
     }
 })
 document.getElementById('tempup').addEventListener('click', () => {  // Onclick Bonus
-    if (score >= 200 && isBonusActive == false) {
+    if (score >= 200 && isBonusActive == false) { // Check if the player has enough score to buy the bonus.
         score -= 200;
-        StartBonus();
+        startBonus();
     }
 })
 cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
-
     clearInterval(cow);
-    if (score >= cowsCost && isBonusActive == false) {
+    if (score >= cowsCost && isBonusActive == false) { // Check if the player has enough score to buy a cow.
         cows++;
         score -= cowsCost;
         cowsCost += cowsCost / 5;
@@ -49,47 +54,43 @@ cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
     }
 })
 
-cowTarget.addEventListener('click', () => { // Onclick store 1 (cow).
-
-    clearInterval(cow);
-    if (score >= cowsCost && isBonusActive == false) {
-        cows++;
-        score -= cowsCost;
-        cowsCost += cowsCost / 5;
+lutinTarget.addEventListener('click', () => { // Onclick store 2 (lutin).
+    clearInterval(lutin);
+    if (score >= lutinsCost && isBonusActive == false) { // Check if the player has enough score to buy the lutin.
+        lutins++;
+        score -= lutinsCost;
+        lutinsCost += lutinsCost / 5;
         location.reload();
     }
 })
 
-function update() { // Update the page with localStorage.
-    getLocalStorage();
+function update() { // Update the page with localStorage on page load.
+    getLocalStorage(); // Get data from localStorage.
     displayOnLoad();
-    showCows();
-    displayCow();
-    if (cows > 0) {
-        cowFarm();
-    }
+    displayBuild(); // Display all build.
+    startFarm(); // Make all the store items start to clic
+
     function getLocalStorage() { // Get data from localStorage.
-        if (localStorage.getItem('scorePlayer') == undefined) {
+        if (localStorage.getItem('scorePlayer') == undefined) { // If no data exist, initialize with default data below
             score = 0;
             multiplier = 1;
             multiplierPrice = 10;
             cows = 0;
             cowsCost = 20;
+            lutins = 0;
+            lutinsCost = 50;
         }
     }
-    function displayOnLoad() { // Display the localStorage.
+    function displayOnLoad() { // Display the elements innerHTML.
         affichageSCore.innerHTML = score;
         buttonMultiplier.innerHTML = `x${multiplier} | Next Multiplier Cost: ${multiplierPrice}`;
         document.getElementById('store1').innerHTML = showCows();
+        document.getElementById('store2').innerHTML = showLutins();
     }
 }
 
-function showScore() { //
-    affichageSCore.innerHTML = calculateScore();
-    function calculateScore() {
-        score = score + (1 * multiplier);
-        return score;
-    }
+function showScore() { // Show score on innerHTML
+    affichageSCore.innerHTML = score = score + (1 * multiplier);
 }
 
 function showMultiplier() { // Affichage du multiplicateur.
@@ -102,31 +103,54 @@ function saveData() { // Sauvegarder les datas.
     localStorage.setItem('multiplierPrice', multiplierPrice);
     localStorage.setItem('cows', cows);
     localStorage.setItem('cowsCost', cowsCost);
+    localStorage.setItem('lutins', lutins);
+    localStorage.setItem('lutinsCost', lutinsCost);
 }
 
-function resetData() {
+function resetData() { // Reset all the data and reload the page.
     score = 0;
     multiplier = 1;
     multiplierPrice = 10;
     cows = 0;
     cowsCost = 20;
+    lutins = 0;
+    lutinsCost = 50;
+    saveData();
+    location.reload();
 }
 
-function cowFarm() {
-    for (let i = 0; i < cows; i++) {
-        cow = setInterval(showScore, 1000);
-    }
-}
-
-function showCows() {
+function startFarm() {
     if (cows > 0) {
-        return document.getElementById('store1').innerHTML = `Cow cost: ${cowsCost}`
-    } else {
-        return document.getElementById('store1').innerHTML = `Add a cow for: ${cowsCost}`
+        for (let i = 0; i < cows; i++) {
+            cow = setInterval(showScore, 1000);
+        }
+    }
+
+    if (lutins > 0) {
+        for (let i = 0; i < lutins; i++) {
+            lutin = setInterval(showScore, 500);
+        }
     }
 }
 
-function displayCow() {
+function showCows() { // Show when the user can buy the item and his price
+    if (cows > 0 || score > cowsCost) {
+        return document.getElementById('store1').innerHTML = `+1 cow (-${cowsCost})`
+    } else {
+        return document.getElementById('store1').innerHTML = `???`
+    }
+}
+
+function showLutins() { // Show when the user can buy the item and his price
+    if (lutins > 0 || score > lutinsCost) {
+        return document.getElementById('store2').innerHTML = `+1 lutin (-${lutinsCost})`
+    } else {
+        return document.getElementById('store2').innerHTML = `???`
+    }
+}
+
+function displayBuild() { // Add the item img to the build.
+
     for (let i = 0; i < cows; i++) {
         let target = document.getElementsByClassName('build1');
         let imgCow = document.createElement("IMG");
@@ -134,9 +158,17 @@ function displayCow() {
         imgCow.setAttribute("width", "50vw");
         target[0].appendChild(imgCow);
     }
+
+    for (let i = 0; i < lutins; i++) {
+        let target = document.getElementsByClassName('build2');
+        let imgLutin = document.createElement("IMG");
+        imgLutin.setAttribute("src", "./assets/img/lutin.png");
+        imgLutin.setAttribute("width", "50vw");
+        target[0].appendChild(imgLutin);
+    }
 }
 
-function StartBonus() {
+function startBonus() {
     isBonusActive = true;
     timeBonus = 10;
 
