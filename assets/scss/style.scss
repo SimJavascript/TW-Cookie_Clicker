@@ -44,7 +44,7 @@ body {
         margin-right: 2vw;
         padding:1vw;
         .build1 {
-          background-image: url(./assets/img/field.png);
+          background-image: url('./assets/img/field.png');
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
@@ -60,7 +60,7 @@ body {
           }
         }
         .build2 {
-          background-image: url(./assets/img/hills.png);
+          background-image: url(/assets/img/hills.png);
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
@@ -76,7 +76,7 @@ body {
           }
         }
         .build3 {
-          background-image: url(./assets/img/mountain.png);
+          background-image: url(/assets/img/mountain.png);
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
@@ -92,7 +92,7 @@ body {
           }
         }
         .build4 {
-          background-image: url(./assets/img/dataCenter.png);
+          background-image: url(/assets/img/dataCenter.png);
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
@@ -108,7 +108,7 @@ body {
           }
         }
         .build5 {
-          background-image: url(./assets/img/robotEnv.png);
+          background-image: url(/assets/img/robotEnv.png);
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
@@ -124,7 +124,7 @@ body {
           }
         }
         .build6 {
-          background-image: url(./assets/img/abstract.png);
+          background-image: url(/assets/img/abstract.png);
           border-radius: 1.2rem;
           display: flex;
           flex-direction: row;
@@ -216,25 +216,25 @@ body {
             font-family: 'VT323', monospace;
           }
           .store1 {
-            background-image: url(./assets/img/field.png);
+            background-image: url(/assets/img/field.png);
             color: #000;
           }
           .store2 {
-            background-image: url(./assets/img/hills.png);
+            background-image: url(/assets/img/hills.png);
           }
           .store3 {
-            background-image: url(./assets/img/mountain.png);
+            background-image: url(/assets/img/mountain.png);
             color: #000;
           }
           .store4 {
-            background-image: url(./assets/img/dataCenter.png);
+            background-image: url(/assets/img/dataCenter.png);
           }
           .store5 {
-            background-image: url(./assets/img/robotEnv.png);
+            background-image: url(/assets/img/robotEnv.png);
             color: #000;
           }
           .store6 {
-            background-image: url(./assets/img/abstract.png);
+            background-image: url(/assets/img/abstract.png);
           }
         }
         #upgrade {
@@ -249,7 +249,7 @@ body {
           margin-right: 2vw;
           padding: 2vw 1vw;
           .build1 {
-            background-image: url(./assets/img/field.png);
+            background-image: url(/assets/img/field.png);
             border-radius: 1.2rem;
             display: flex;
             flex-direction: row;
@@ -265,7 +265,7 @@ body {
             }
           }
           .build2 {
-            background-image: url(./assets/img/hills.png);
+            background-image: url(/assets/img/hills.png);
             border-radius: 1.2rem;
             display: flex;
             flex-direction: row;
@@ -281,7 +281,7 @@ body {
             }
           }
           .build3 {
-            background-image: url(./assets/img/mountain.png);
+            background-image: url(/assets/img/mountain.png);
             border-radius: 1.2rem;
             display: flex;
             flex-direction: row;
@@ -297,7 +297,7 @@ body {
             }
           }
           .build4 {
-            background-image: url(./assets/img/dataCenter.png);
+            background-image: url(/assets/img/dataCenter.png);
             border-radius: 1.2rem;
             display: flex;
             flex-direction: row;
@@ -313,7 +313,7 @@ body {
             }
           }
           .build5 {
-            background-image: url(./assets/img/robotEnv.png);
+            background-image: url(/assets/img/robotEnv.png);
             border-radius: 1.2rem;
             display: flex;
             flex-direction: row;
@@ -329,7 +329,7 @@ body {
             }
           }
           .build6 {
-            background-image: url(./assets/img/abstract.png);
+            background-image: url(/assets/img/abstract.png);
             border-radius: 1.2rem;
             display: flex;
             flex-direction: row;
