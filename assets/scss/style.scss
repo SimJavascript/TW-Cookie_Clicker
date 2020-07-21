@@ -8,7 +8,7 @@ body {
       text-align: center;
       font-family: 'VT323', monospace;
       color: #fff;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     #scoreLineOne{
       display: flex;
@@ -45,7 +45,7 @@ body {
         justify-content: center;
         align-items: center;
         #cookbtn {
-          width: 40vw;
+          width: 30vw;
           height: auto;
         }
       }
@@ -60,7 +60,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        width: 100vw;
+        width: 97vw;
         .storeBtn {
           width: 45vw;
           margin: 2vw;
@@ -94,13 +94,14 @@ body {
         }
       }
       #upgrade {
-        width: 100vw;
+        width: 97vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border: 5px rgba(163, 163, 163, 1) solid;
         background: rgba(38, 17, 71, 1);
+        padding-bottom: 3vw;
         border-radius: 10vw;
         .build1 {
           background-image: url(/assets/img/field.png);
@@ -229,41 +230,10 @@ body {
 
 
 // MEDIA QUERIES
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 768px) {
   body {
     background-image: url(/assets/img/wallMobile.png);
     main {
-      max-width: 97vw;
-      max-height: 95vh;
-      #title {
-        text-align: center;
-        font-family: 'VT323', monospace;
-        color: #fff;
-        font-size: 3rem;
-      }
-      #scoreLineOne{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        text-align: center;
-        font-family: 'VT323', monospace;
-        color: #fff;
-        font-size: 1.5rem;
-      }
-      #scoreLineTwo{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        text-align: center;
-        font-family: 'VT323', monospace;
-        font-size: 1.8rem;
-        color: rgba(82, 180, 179, 1);
-        article {
-          padding-left: 5vw;
-        }
-      }
       #clickUpgrade {
         display: flex;
         flex-direction: column;
@@ -271,12 +241,12 @@ body {
         align-items: center;
         #cookie {
           margin: 2vw 0;
-          width: 100vw;
+          width: 97vw;
           display: flex;
           justify-content: center;
           align-items: center;
           #cookbtn {
-            width: 40vw;
+            width: 25vw;
             height: auto;
           }
         }
@@ -284,20 +254,20 @@ body {
           border: 5px rgba(163, 163, 163, 1) solid;
           background: rgba(38, 17, 71, 1);
           border-radius: 10vw;
-          padding: 1vw 0;
+          padding: 2vw 0;
           text-align: center;
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
-          width: 100vw;
+          width: 95vw;
           .storeBtn {
-            width: 45vw;
+            width: 40vw;
             margin: 2vw;
             margin: 0.5vh 1vw;
             border: none;
-            border-radius: 4vw;
+            border-radius: 1.5vw;
             color: #fff;
             font-size: 1.5rem;
             font-family: 'VT323', monospace;
@@ -332,7 +302,7 @@ body {
           align-items: center;
           border: 5px rgba(163, 163, 163, 1) solid;
           background: rgba(38, 17, 71, 1);
-          border-radius: 10vw;
+          border-radius: 6vw;
           .build1 {
             background-image: url(/assets/img/field.png);
             border-radius: 1.2rem;
@@ -346,7 +316,7 @@ body {
             height: 4vh;
             overflow: hidden;
               img {
-              width: 7vw;
+              width: 4vw;
             }
           }
           .build2 {
@@ -362,7 +332,7 @@ body {
             height: 4vh;
             overflow: hidden;
               img {
-              width: 6vw;
+              width: 3vw;
             }
           }
           .build3 {
@@ -378,7 +348,7 @@ body {
             height: 4vh;
             overflow: hidden;
               img {
-              width: 7vw;
+              width: 4vw;
             }
           }
           .build4 {
@@ -394,7 +364,7 @@ body {
             height: 4vh;
             overflow: hidden;
               img {
-              width: 6vw;
+              width: 4vw;
             }
           }
           .build5 {
@@ -426,14 +396,211 @@ body {
             height: 4vh;
             overflow: hidden;
               img {
-              width: 7vw;
+              width: 5vw;
             }
           }
         }
       }
       #tempUpgrade {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2vw;
+        #tempup {
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          background: #000;
+          color:#fff;
+        }
+        #reset {
+          margin-top: 2vw;
+          background: #fff;
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background: none;
+    main {
+      #clickUpgrade {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        #cookie {
+          margin: 2vw 0;
+          width: 40vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          #cookbtn {
+            width: 25vw;
+            height: auto;
+          }
+        }
+        #store {
+          border: 5px rgba(163, 163, 163, 1) solid;
+          background: rgba(38, 17, 71, 1);
+          border-radius: 10vw;
+          padding: 2vw 0;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 60vw;
+          .storeBtn {
+            width: 40vw;
+            margin: 2vw;
+            margin: 0.5vh 1vw;
+            border: none;
+            border-radius: 1.5vw;
+            color: #fff;
+            font-size: 1.5rem;
+            font-family: 'VT323', monospace;
+          }
+          .store1 {
+            background-image: url(/assets/img/field.png);
+            color: #000;
+          }
+          .store2 {
+            background-image: url(/assets/img/hills.png);
+          }
+          .store3 {
+            background-image: url(/assets/img/mountain.png);
+            color: #000;
+          }
+          .store4 {
+            background-image: url(/assets/img/dataCenter.png);
+          }
+          .store5 {
+            background-image: url(/assets/img/robotEnv.png);
+            color: #000;
+          }
+          .store6 {
+            background-image: url(/assets/img/abstract.png);
+          }
+        }
+        #upgrade {
+          width: 20vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: 5px rgba(163, 163, 163, 1) solid;
+          background: rgba(38, 17, 71, 1);
+          border-radius: 6vw;
+          .build1 {
+            background-image: url(/assets/img/field.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 4vw;
+            }
+          }
+          .build2 {
+            background-image: url(/assets/img/hills.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 3vw;
+            }
+          }
+          .build3 {
+            background-image: url(/assets/img/mountain.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 4vw;
+            }
+          }
+          .build4 {
+            background-image: url(/assets/img/dataCenter.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 4vw;
+            }
+          }
+          .build5 {
+            background-image: url(/assets/img/robotEnv.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 4vw;
+            }
+          }
+          .build6 {
+            background-image: url(/assets/img/abstract.png);
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 1vh;
+            padding-left: 1vw;
+            width: 94vw;
+            height: 4vh;
+            overflow: hidden;
+              img {
+              width: 5vw;
+            }
+          }
+        }
+      }
+      #tempUpgrade {
+        display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
         margin-top: 2vw;
@@ -460,210 +627,4 @@ body {
 
 
 
-@media only screen and (min-width: 1024px) {
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 80vw;
-      #title {
-        width: 100vw;
-        text-align: center;
-        font-family: 'VT323', monospace;
-        font-size: 6em;
-        padding-right: 35vw;
-      }
-      #scoring {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding-bottom: 2vh;
-        article {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 40vw;
-          text-align: center;
-          font-family: 'VT323', monospace;
-          font-size: 3em;
-        }
-      }
-      #clickUpgrade {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        #cookie {
-          width: 30vw;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          #cookbtn {
-            width: 20vw;
-            height: auto;
-          }
-        }
-        #store {
-          border: 5px rgba(163, 163, 163, 1) solid;
-          background: rgba(38, 17, 71, 1);
-          border-radius: 3vw;
-          padding: 1vw 0;
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          .storeBtn {
-            width: 12vw;
-            height: 8vh;
-            margin: 0.5vh 1vw;
-            border: none;
-            border-radius: 4vw;
-            color: #fff;
-            font-size: 2.5em;
-            font-family: 'VT323', monospace;
-          }
-          .store1 {
-            background-image: url(/assets/img/field.png);
-            color: #000;
-          }
-          .store2 {
-            background-image: url(/assets/img/hills.png);
-          }
-          .store3 {
-            background-image: url(/assets/img/mountain.png);
-            color: #000;
-          }
-          .store4 {
-            background-image: url(/assets/img/dataCenter.png);
-          }
-          .store5 {
-            background-image: url(/assets/img/robotEnv.png);
-            color: #000;
-          }
-          .store6 {
-            background-image: url(/assets/img/abstract.png);
-          }
-        }
-        #upgrade {
-          width: 40vw;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border: 10px rgba(163, 163, 163, 1) solid;
-          background: rgba(38, 17, 71, 1);
-          border-radius: 4vw;
-          margin-right: 2vw;
-          padding: 2vw 1vw;
-          .build1 {
-            background-image: url(/assets/img/field.png);
-            border-radius: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin-top: 1vh;
-            padding-left: 1vw;
-            width: 40vw;
-            height: 8vh;
-            overflow: hidden;
-              img {
-              width: 2vw;
-            }
-          }
-          .build2 {
-            background-image: url(/assets/img/hills.png);
-            border-radius: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin-top: 1vh;
-            padding-left: 1vw;
-            width: 40vw;
-            height: 8vh;
-            overflow: hidden;
-              img {
-              width: 2vw;
-            }
-          }
-          .build3 {
-            background-image: url(/assets/img/mountain.png);
-            border-radius: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin-top: 1vh;
-            padding-left: 1vw;
-            width: 40vw;
-            height: 8vh;
-            overflow: hidden;
-              img {
-              width: 2vw;
-            }
-          }
-          .build4 {
-            background-image: url(/assets/img/dataCenter.png);
-            border-radius: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin-top: 1vh;
-            padding-left: 1vw;
-            width: 40vw;
-            height: 8vh;
-            overflow: hidden;
-              img {
-              width: 2vw;
-            }
-          }
-          .build5 {
-            background-image: url(/assets/img/robotEnv.png);
-            border-radius: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin-top: 1vh;
-            padding-left: 1vw;
-            width: 40vw;
-            height: 8vh;
-            overflow: hidden;
-              img {
-              width: 1vw;
-            }
-          }
-          .build6 {
-            background-image: url(/assets/img/abstract.png);
-            border-radius: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin-top: 1vh;
-            padding-left: 1vw;
-            width: 40vw;
-            height: 8vh;
-            overflow: hidden;
-              img {
-              width: 2vw;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-#tempUpgrade {
-  margin-right: 14vw;
-}
+

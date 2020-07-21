@@ -279,7 +279,7 @@ function showDwarfs() { // Show when the user can buy the item and his price
 
 function showHackers() { // Show when the user can buy the item and his price
     if (hackers > 0 || score > hackersCost) {
-        return document.getElementById('store4').innerHTML = `+1 Focus Hacker (-${hackersCost})`
+        return document.getElementById('store4').innerHTML = `+1 Hacker (-${hackersCost})`
     } else {
         return document.getElementById('store4').innerHTML = `???`
     }
@@ -364,18 +364,21 @@ function startBonus() {
 
     if (timeBonus == 10) {
         let bonus = setInterval(countDown, 1000);
-        multiplier *= 3;
+        multiplier *= 2;
 
         function countDown() {
 
             timeBonus--;
-            document.getElementById('tempup').innerHTML = `Bonus is UP ! Everything is +200% | Time left : ${timeBonus}`;
+            document.getElementById('tempup').innerHTML = `+200% BONUS POWER | Time left : ${timeBonus}`;
+            document.getElementById('tempup').style.backgroundColor = "rgba(240, 123, 48, 1)";
+            
 
             if (timeBonus == 0) {
                 multiplier /= 3;
                 clearInterval(bonus);
                 isBonusActive = false;
-                document.getElementById('tempup').innerHTML = `Buy Bonus (+200% Per Clic For 10 sec) | Cost: 500`;
+                document.getElementById('tempup').innerHTML = `BONUS 200%/clic | Cost: 500`;
+                document.getElementById('tempup').style.backgroundColor = "rgba(41, 22, 121, 1)";
             }
         }
     }
