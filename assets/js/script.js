@@ -364,7 +364,7 @@ function startBonus() {
 
     if (timeBonus == 10) {
         let bonus = setInterval(countDown, 1000);
-        multiplier *= 2;
+        multiplier *= 3;
 
         function countDown() {
 
