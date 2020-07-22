@@ -1,3 +1,70 @@
+.glow-on-hover {
+  width: 25vw;
+  height: 5vh;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 5vw; }
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-animation: glowing 20s linear infinite;
+          animation: glowing 20s linear infinite;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  border-radius: 5vw; }
+
+.glow-on-hover:active {
+  color: #000; }
+
+.glow-on-hover:active:after {
+  background: transparent; }
+
+.glow-on-hover:hover:before {
+  opacity: 1; }
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 5vw; }
+
+@-webkit-keyframes glowing {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 400% 0; }
+  100% {
+    background-position: 0 0; } }
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 400% 0; }
+  100% {
+    background-position: 0 0; } }
+
 body {
   background-image: url(/assets/img/wallMobile.png); }
   body main {
@@ -52,9 +119,13 @@ body {
         font-size: 1.2rem;
         font-family: 'VT323', monospace;
         color: #fff;
-        background: #381579;
-        background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
+        background: #bb94f8;
         width: 40vw; }
+      body main #scoreLineTwo Button:hover {
+        background: rgba(187, 148, 248, 0.5); }
+      body main #scoreLineTwo Button:active {
+        position: relative;
+        top: 1px; }
     body main #clickUpgrade {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -84,10 +155,10 @@ body {
         body main #clickUpgrade #cookie #cookbtn {
           width: 20vw;
           height: auto; }
+        body main #clickUpgrade #cookie #cookbtn:active {
+          position: relative;
+          top: 0.5vw; }
       body main #clickUpgrade #store {
-        border: 5px #a3a3a3 solid;
-        background: #261147;
-        border-radius: 10vw;
         padding: 1vw 0;
         text-align: center;
         display: -webkit-box;
@@ -115,81 +186,6 @@ body {
           color: #fff;
           font-size: 1.5rem;
           font-family: 'VT323', monospace; }
-        body main #clickUpgrade #store .store1 {
-          background-image: url(/assets/img/field.png);
-          color: #000; }
-          body main #clickUpgrade #store .store1 .glow-on-hover {
-            width: 220px;
-            height: 50px;
-            border: none;
-            outline: none;
-            color: #fff;
-            cursor: pointer;
-            position: relative;
-            z-index: 0;
-            border-radius: 10px; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:before {
-            content: '';
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            background-size: 400%;
-            z-index: -1;
-            -webkit-filter: blur(5px);
-                    filter: blur(5px);
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            -webkit-animation: glowing 20s linear infinite;
-                    animation: glowing 20s linear infinite;
-            opacity: 0;
-            -webkit-transition: opacity .3s ease-in-out;
-            transition: opacity .3s ease-in-out;
-            border-radius: 10px; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:active {
-            color: #000; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:active:after {
-            background: transparent; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:hover:before {
-            opacity: 1; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:after {
-            z-index: -1;
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: #111;
-            left: 0;
-            top: 0;
-            border-radius: 10px; }
-
-@-webkit-keyframes glowing {
-  0% {
-    background-position: 0 0; }
-  50% {
-    background-position: 400% 0; }
-  100% {
-    background-position: 0 0; } }
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0; }
-  50% {
-    background-position: 400% 0; }
-  100% {
-    background-position: 0 0; } }
-        body main #clickUpgrade #store .store2 {
-          background-image: url(/assets/img/hills.png); }
-        body main #clickUpgrade #store .store3 {
-          background-image: url(/assets/img/mountain.png);
-          color: #000; }
-        body main #clickUpgrade #store .store4 {
-          background-image: url(/assets/img/dataCenter.png); }
-        body main #clickUpgrade #store .store5 {
-          background-image: url(/assets/img/robotEnv.png);
-          color: #000; }
-        body main #clickUpgrade #store .store6 {
-          background-image: url(/assets/img/abstract.png); }
       body main #clickUpgrade #upgrade {
         width: 97vw;
         display: -webkit-box;
@@ -205,11 +201,8 @@ body {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        border: 3px #a3a3a3 solid;
-        background: #261147;
         padding-bottom: 5vw;
-        padding-top: 3vw;
-        border-radius: 10vw; }
+        padding-top: 3vw; }
         body main #clickUpgrade #upgrade .build1 {
           background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
@@ -362,6 +355,8 @@ body {
         border-radius: 2vw;
         background: #000;
         color: #fff; }
+      body main #tempUpgrade #tempup:hover {
+        background: rgba(187, 148, 248, 0.5); }
       body main #tempUpgrade #reset {
         margin-top: 2vw;
         background: #fff;
@@ -369,6 +364,8 @@ body {
         border: none;
         border-radius: 2vw;
         color: red; }
+      body main #tempUpgrade #reset:hover {
+        background: rgba(232, 61, 78, 0.5); }
 
 @media only screen and (min-width: 768px) {
   body {
@@ -415,7 +412,7 @@ body {
                 justify-content: space-evenly;
         text-align: center;
         font-family: 'VT323', monospace;
-        font-size: 1.8rem;
+        font-size: 3rem;
         color: #52b4b3; }
         body main #scoreLineTwo article {
           padding-left: 5vw; }
@@ -425,9 +422,13 @@ body {
           font-size: 2rem;
           font-family: 'VT323', monospace;
           color: #fff;
-          background: #381579;
-          background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
-          width: 20vw; }
+          background: #bb94f8;
+          width: 30vw; }
+        body main #scoreLineTwo Button:hover {
+          background: rgba(187, 148, 248, 0.5); }
+        body main #scoreLineTwo Button:active {
+          position: relative;
+          top: 1px; }
       body main #clickUpgrade {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -457,10 +458,10 @@ body {
           body main #clickUpgrade #cookie #cookbtn {
             width: 25vw;
             height: auto; }
+          body main #clickUpgrade #cookie #cookbtn:active {
+            position: relative;
+            top: 0.5vw; }
         body main #clickUpgrade #store {
-          border: 5px #a3a3a3 solid;
-          background: #261147;
-          border-radius: 10vw;
           padding: 2vw 0;
           text-align: center;
           display: -webkit-box;
@@ -488,21 +489,6 @@ body {
             color: #fff;
             font-size: 1.5rem;
             font-family: 'VT323', monospace; }
-          body main #clickUpgrade #store .store1 {
-            background-image: url(/assets/img/field.png);
-            color: #000; }
-          body main #clickUpgrade #store .store2 {
-            background-image: url(/assets/img/hills.png); }
-          body main #clickUpgrade #store .store3 {
-            background-image: url(/assets/img/mountain.png);
-            color: #000; }
-          body main #clickUpgrade #store .store4 {
-            background-image: url(/assets/img/dataCenter.png); }
-          body main #clickUpgrade #store .store5 {
-            background-image: url(/assets/img/robotEnv.png);
-            color: #000; }
-          body main #clickUpgrade #store .store6 {
-            background-image: url(/assets/img/abstract.png); }
         body main #clickUpgrade #upgrade {
           width: 100vw;
           display: -webkit-box;
@@ -517,10 +503,7 @@ body {
                   justify-content: center;
           -webkit-box-align: center;
               -ms-flex-align: center;
-                  align-items: center;
-          border: 5px #a3a3a3 solid;
-          background: #261147;
-          border-radius: 6vw; }
+                  align-items: center; }
           body main #clickUpgrade #upgrade .build1 {
             background-image: url(/assets/img/field.png);
             border-radius: 1.2rem;
@@ -673,24 +656,28 @@ body {
           border-radius: 2vw;
           background: #000;
           color: #fff; }
+        body main #tempUpgrade #tempup:hover {
+          background: rgba(187, 148, 248, 0.5); }
         body main #tempUpgrade #reset {
           margin-top: 2vw;
           background: #fff;
           height: 4vh;
           border: none;
           border-radius: 2vw;
-          color: red; } }
+          color: red; }
+        body main #tempUpgrade #reset:hover {
+          background: rgba(232, 61, 78, 0.5); } }
 
 @media only screen and (min-width: 1024px) {
   body {
-    background: none; }
+    background: #292d3e; }
     body main {
       max-width: 100vw;
       max-height: 100vh; }
       body main #title {
         text-align: center;
         font-family: 'VT323', monospace;
-        color: #000;
+        color: #fff;
         font-size: 4rem; }
       body main #scoreLineOne {
         display: -webkit-box;
@@ -708,7 +695,7 @@ body {
                 justify-content: space-evenly;
         text-align: center;
         font-family: 'VT323', monospace;
-        color: #381579;
+        color: #bb94f8;
         font-size: 3rem; }
       body main #scoreLineTwo {
         display: -webkit-box;
@@ -730,16 +717,21 @@ body {
         color: #e83d4e;
         margin-bottom: 2vh; }
         body main #scoreLineTwo article {
-          padding-left: 4vw; }
+          padding-left: 1.2vw; }
         body main #scoreLineTwo button {
           border: none;
           border-radius: 2vw;
           font-size: 2rem;
           font-family: 'VT323', monospace;
           color: #fff;
-          background: #381579;
-          background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
-          width: 20vw; }
+          background: #bb94f8;
+          width: 25vw;
+          height: 5vh; }
+        body main #scoreLineTwo Button:hover {
+          background: rgba(187, 148, 248, 0.5); }
+        body main #scoreLineTwo Button:active {
+          position: relative;
+          top: 1px; }
       body main #clickUpgrade {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -770,6 +762,9 @@ body {
           body main #clickUpgrade #cookie #cookbtn {
             width: 15vw;
             height: auto; }
+          body main #clickUpgrade #cookie #cookbtn:active {
+            position: relative;
+            top: 0.5vw; }
         body main #clickUpgrade #store {
           background: none;
           border: none;
@@ -799,79 +794,9 @@ body {
             color: #fff;
             font-size: 1.5rem;
             font-family: 'VT323', monospace; }
-          body main #clickUpgrade #store .store1 .glow-on-hover {
-            width: 220px;
-            height: 50px;
-            border: none;
-            outline: none;
-            color: #fff;
-            cursor: pointer;
-            position: relative;
-            z-index: 0;
-            border-radius: 10px; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:before {
-            content: '';
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            background-size: 400%;
-            z-index: -1;
-            -webkit-filter: blur(5px);
-                    filter: blur(5px);
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            -webkit-animation: glowing 20s linear infinite;
-                    animation: glowing 20s linear infinite;
-            opacity: 0;
-            -webkit-transition: opacity .3s ease-in-out;
-            transition: opacity .3s ease-in-out;
-            border-radius: 10px; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:active {
-            color: #000; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:active:after {
-            background: transparent; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:hover:before {
-            opacity: 1; }
-          body main #clickUpgrade #store .store1 .glow-on-hover:after {
-            z-index: -1;
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: #111;
-            left: 0;
-            top: 0;
-            border-radius: 10px; }
-  @-webkit-keyframes glowing {
-    0% {
-      background-position: 0 0; }
-    50% {
-      background-position: 400% 0; }
-    100% {
-      background-position: 0 0; } }
-  @keyframes glowing {
-    0% {
-      background-position: 0 0; }
-    50% {
-      background-position: 400% 0; }
-    100% {
-      background-position: 0 0; } }
-          body main #clickUpgrade #store .store2 {
-            background-image: url(/assets/img/hills.png); }
-          body main #clickUpgrade #store .store3 {
-            background-image: url(/assets/img/mountain.png);
-            color: #000; }
-          body main #clickUpgrade #store .store4 {
-            background-image: url(/assets/img/dataCenter.png); }
-          body main #clickUpgrade #store .store5 {
-            background-image: url(/assets/img/robotEnv.png);
-            color: #000; }
-          body main #clickUpgrade #store .store6 {
-            background-image: url(/assets/img/abstract.png); }
         body main #clickUpgrade #upgrade {
           width: 45vw;
-          height: 35vh;
+          height: 50vh;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -885,10 +810,16 @@ body {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center;
-          background: none;
-          border: none; }
+          background: none; }
+          body main #clickUpgrade #upgrade p {
+            font-family: 'VT323', monospace;
+            font-size: 2rem;
+            color: #7678a5; }
           body main #clickUpgrade #upgrade .build1 {
             background-image: url(/assets/img/field.png);
+            border-radius: 1vw;
+            margin: 0 0;
+            padding: 0 0;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -901,7 +832,6 @@ body {
                     align-items: flex-start;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
-            margin-top: 3.8vh;
             padding-left: 1vw;
             width: 38vw;
             height: 10vh;
@@ -910,7 +840,9 @@ body {
               width: 2.5vw; }
           body main #clickUpgrade #upgrade .build2 {
             background-image: url(/assets/img/hills.png);
-            border-radius: 1.2rem;
+            border-radius: 1vw;
+            margin: 0 0;
+            padding: 0 0;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -923,16 +855,17 @@ body {
                     align-items: flex-start;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
-            margin-top: 1vh;
             padding-left: 1vw;
             width: 38vw;
             height: 10vh;
             overflow: hidden; }
             body main #clickUpgrade #upgrade .build2 img {
-              width: 2vw; }
+              width: 2.5vw; }
           body main #clickUpgrade #upgrade .build3 {
             background-image: url(/assets/img/mountain.png);
-            border-radius: 1.2rem;
+            border-radius: 1vw;
+            margin: 0 0;
+            padding: 0 0;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -945,16 +878,17 @@ body {
                     align-items: flex-start;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
-            margin-top: 1vh;
             padding-left: 1vw;
             width: 38vw;
             height: 10vh;
             overflow: hidden; }
             body main #clickUpgrade #upgrade .build3 img {
-              width: 2vw; }
+              width: 2.5vw; }
           body main #clickUpgrade #upgrade .build4 {
             background-image: url(/assets/img/dataCenter.png);
-            border-radius: 1.2rem;
+            border-radius: 1vw;
+            margin: 0 0;
+            padding: 0 0;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -967,16 +901,17 @@ body {
                     align-items: flex-start;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
-            margin-top: 1vh;
             padding-left: 1vw;
             width: 38vw;
             height: 10vh;
             overflow: hidden; }
             body main #clickUpgrade #upgrade .build4 img {
-              width: 2vw; }
+              width: 2.5vw; }
           body main #clickUpgrade #upgrade .build5 {
             background-image: url(/assets/img/robotEnv.png);
-            border-radius: 1.2rem;
+            border-radius: 1vw;
+            margin: 0 0;
+            padding: 0 0;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -989,16 +924,17 @@ body {
                     align-items: flex-start;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
-            margin-top: 1vh;
             padding-left: 1vw;
             width: 38vw;
             height: 10vh;
             overflow: hidden; }
             body main #clickUpgrade #upgrade .build5 img {
-              width: 1.2vw; }
+              width: 1.6vw; }
           body main #clickUpgrade #upgrade .build6 {
             background-image: url(/assets/img/abstract.png);
-            border-radius: 1.2rem;
+            border-radius: 1vw;
+            margin: 0 0;
+            padding: 0 0;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -1011,13 +947,12 @@ body {
                     align-items: flex-start;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
-            margin-top: 1vh;
             padding-left: 1vw;
             width: 38vw;
             height: 10vh;
             overflow: hidden; }
             body main #clickUpgrade #upgrade .build6 img {
-              width: 2vw; }
+              width: 2.5vw; }
       body main #tempUpgrade {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1036,10 +971,12 @@ body {
           height: 4vh;
           border: none;
           border-radius: 2vw;
-          background: #381579;
+          background: #bb94f8;
           font-family: 'VT323', monospace;
           font-size: 2rem;
           color: #fff; }
+        body main #tempUpgrade #tempup:hover {
+          background: rgba(187, 148, 248, 0.5); }
         body main #tempUpgrade #reset {
           margin-top: 2vw;
           background: #e83d4e;
@@ -1048,5 +985,7 @@ body {
           border-radius: 2vw;
           font-family: 'VT323', monospace;
           font-size: 2rem;
-          color: #fff; } }
+          color: #fff; }
+        body main #tempUpgrade #reset:hover {
+          background: rgba(232, 61, 78, 0.5); } }
 /*# sourceMappingURL=style.css.map */
