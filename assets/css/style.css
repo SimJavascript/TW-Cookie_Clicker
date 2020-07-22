@@ -45,7 +45,7 @@ body {
       font-size: 1.8rem;
       color: #52b4b3; }
       body main #scoreLineTwo article {
-        padding-left: 15vw; }
+        padding-left: 3vw; }
       body main #scoreLineTwo button {
         border: none;
         border-radius: 2vw;
@@ -704,11 +704,7 @@ body {
                 justify-content: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center;
-        background: #381579;
-        background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
-        border-radius: 30vw;
-        border: 5px #a3a3a3 solid; }
+                align-items: center; }
         body main #clickUpgrade #cookie #cookbtn {
           width: 20vw;
           height: auto; }

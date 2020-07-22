@@ -30,7 +30,7 @@ body {
       font-size: 1.8rem;
       color: rgba(82, 180, 179, 1);
       article {
-        padding-left: 15vw;
+        padding-left: 3vw;
       }
       button {
         border: none;
@@ -538,10 +538,6 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          background: rgba(56, 21, 121, 1);
-          background: linear-gradient(185deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
-          border-radius: 30vw;
-          border: 5px rgba(163, 163, 163, 1) solid;
           #cookbtn {
             width: 20vw;
             height: auto;
