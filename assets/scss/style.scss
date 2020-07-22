@@ -8,7 +8,7 @@ body {
       text-align: center;
       font-family: 'VT323', monospace;
       color: #fff;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
     }
     #scoreLineOne{
       display: flex;
@@ -30,7 +30,17 @@ body {
       font-size: 1.8rem;
       color: rgba(82, 180, 179, 1);
       article {
-        padding-left: 5vw;
+        padding-left: 15vw;
+      }
+      button {
+        border: none;
+        border-radius: 2vw;
+        font-size: 1.2rem;
+        font-family: 'VT323', monospace;
+        color: #fff;
+        background: rgba(56, 21, 121, 1);
+        background: linear-gradient(185deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
+        width: 40vw;
       }
     }
     #clickUpgrade {
@@ -45,7 +55,7 @@ body {
         justify-content: center;
         align-items: center;
         #cookbtn {
-          width: 30vw;
+          width: 20vw;
           height: auto;
         }
       }
@@ -99,9 +109,10 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 5px rgba(163, 163, 163, 1) solid;
+        border: 3px rgba(163, 163, 163, 1) solid;
         background: rgba(38, 17, 71, 1);
-        padding-bottom: 3vw;
+        padding-bottom: 5vw;
+        padding-top: 3vw;
         border-radius: 10vw;
         .build1 {
           background-image: url(/assets/img/field.png);
@@ -203,7 +214,7 @@ body {
     }
     #tempUpgrade {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-around;
       align-items: center;
       margin-top: 2vw;
