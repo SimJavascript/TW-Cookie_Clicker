@@ -423,8 +423,8 @@ body {
       body main #tempUpgrade .show-modal {
         opacity: 1;
         visibility: visible;
-        -webkit-transform: scale(1);
-                transform: scale(1);
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
         -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
         transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
         transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
