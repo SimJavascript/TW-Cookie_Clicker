@@ -203,6 +203,8 @@ body {
                 align-items: center;
         padding-bottom: 5vw;
         padding-top: 3vw; }
+        body main #clickUpgrade #upgrade p {
+          visibility: hidden; }
         body main #clickUpgrade #upgrade .build1 {
           background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
@@ -504,6 +506,10 @@ body {
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center; }
+          body main #clickUpgrade #upgrade p {
+            font-family: 'VT323', monospace;
+            font-size: 2rem;
+            color: #7678a5; }
           body main #clickUpgrade #upgrade .build1 {
             background-image: url(/assets/img/field.png);
             border-radius: 1.2rem;
@@ -812,12 +818,14 @@ body {
                   align-items: center;
           background: none; }
           body main #clickUpgrade #upgrade p {
+            visibility: visible;
             font-family: 'VT323', monospace;
             font-size: 2rem;
             color: #7678a5; }
           body main #clickUpgrade #upgrade .build1 {
             background-image: url(/assets/img/field.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: -webkit-box;
@@ -841,6 +849,7 @@ body {
           body main #clickUpgrade #upgrade .build2 {
             background-image: url(/assets/img/hills.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: -webkit-box;
@@ -864,6 +873,7 @@ body {
           body main #clickUpgrade #upgrade .build3 {
             background-image: url(/assets/img/mountain.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: -webkit-box;
@@ -887,6 +897,7 @@ body {
           body main #clickUpgrade #upgrade .build4 {
             background-image: url(/assets/img/dataCenter.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: -webkit-box;
@@ -910,6 +921,7 @@ body {
           body main #clickUpgrade #upgrade .build5 {
             background-image: url(/assets/img/robotEnv.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: -webkit-box;
@@ -933,6 +945,7 @@ body {
           body main #clickUpgrade #upgrade .build6 {
             background-image: url(/assets/img/abstract.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: -webkit-box;
@@ -985,7 +998,7 @@ body {
           border-radius: 2vw;
           font-family: 'VT323', monospace;
           font-size: 2rem;
-          color: #fff; }
+          color: #000; }
         body main #tempUpgrade #reset:hover {
           background: rgba(232, 61, 78, 0.5); } }
 /*# sourceMappingURL=style.css.map */

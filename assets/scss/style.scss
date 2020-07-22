@@ -160,6 +160,9 @@ body {
         align-items: center;
         padding-bottom: 5vw;
         padding-top: 3vw;
+        p {
+          visibility: hidden;
+        }
         .build1 {
           background-image: url(/assets/img/field.png);
           border-radius: 1.2rem;
@@ -390,6 +393,11 @@ body {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          p {
+            font-family: 'VT323', monospace;
+            font-size: 2rem;
+            color: #7678a5;
+          }
           .build1 {
             background-image: url(/assets/img/field.png);
             border-radius: 1.2rem;
@@ -624,6 +632,7 @@ body {
           align-items: center;
           background: none;
           p {
+            visibility: visible;
             font-family: 'VT323', monospace;
             font-size: 2rem;
             color: #7678a5;
@@ -631,6 +640,7 @@ body {
           .build1 {
             background-image: url(/assets/img/field.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: flex;
@@ -648,6 +658,7 @@ body {
           .build2 {
             background-image: url(/assets/img/hills.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: flex;
@@ -665,6 +676,7 @@ body {
           .build3 {
             background-image: url(/assets/img/mountain.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: flex;
@@ -682,6 +694,7 @@ body {
           .build4 {
             background-image: url(/assets/img/dataCenter.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: flex;
@@ -699,6 +712,7 @@ body {
           .build5 {
             background-image: url(/assets/img/robotEnv.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: flex;
@@ -716,6 +730,7 @@ body {
           .build6 {
             background-image: url(/assets/img/abstract.png);
             border-radius: 1vw;
+            border: 0.2vh solid #7678a5;
             margin: 0 0;
             padding: 0 0;
             display: flex;
@@ -759,7 +774,7 @@ body {
           border-radius: 2vw;
           font-family: 'VT323', monospace;
           font-size: 2rem;
-          color: #fff;
+          color: #000;
         }
         #reset:hover {
           background: rgba(232, 61, 78, 0.5);
