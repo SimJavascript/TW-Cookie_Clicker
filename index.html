@@ -9,83 +9,80 @@
   <title>Coder clicker</title>
 </head>
 
-<body>
-  <main>
-    <section class="title" id="title">
-      CODER CLICKER
-    </section>
-    <section class="clickUpgrade" id="clickUpgrade">
-      <section class="cookie" id="cookie">
-        <img src="./assets/img/ordiInput.png" class="cookbtn" id="cookbtn" />  
+  <body>
+    <main>
+      <section class="title" id="title">
+        <article>CODER CLICKER</article>
       </section>
-      <section class="upgrade" id="upgrade">
-        <article class="build1" id="build1">
-          <img src="./assets/img/cow.png" width="50vw" alt="cow">
-
-        </article>
-        <article class="build2" id="build2">
-          <img src="./assets/img/lutin.png" width="40vw" alt="lutin">
-
-        </article>
-        <article class="build3" id="build3">
-          <img src="./assets/img/dwarf.png" width="40vw" alt="dwarf">
-
-        </article>
-        <article class="build4" id="build4">
-          <img src="./assets/img/hacker.png" width="40vw" alt="hacker">
-
-        </article>
-        <article class="build5" id=build5>
-          <img src="./assets/img/robot.png" width="40vw" alt="robot">
-
-        </article>
-        <article class="build6" id=build6>
-          <img src="./assets/img/torvald.png" width="50vw" alt="torvald">
-          <img src="./assets/img/torvald.png" width="50vw" alt="torvald">
-          <img src="./assets/img/torvald.png" width="50vw" alt="torvald">
-          <img src="./assets/img/torvald.png" width="50vw" alt="torvald">
-          <img src="./assets/img/torvald.png" width="50vw" alt="torvald">
-
-        </article>
+      <section class="scoring" id="scoring">
+        <section class="scoreLineOne" id="scoreLineOne">
+          <article class="scoreText">SCORE</article>
+          <article class="multiplyText">MULTIPLIER</article>
+        </section>
+        <section class="scoreLineTwo" id="scoreLineTwo">
+          <article class="score" id="score">
+          </article>
+          <button class="multiplier" id="multiplier">
+          </button>
+        </section>
       </section>
-    </section>
-    <section class="scoring" id="scoring">
-      <article class="score" id="score">
-        SCORE
-      </article>
-      <article class="multiplier" id="multiplier">
-        MULTIPLIER
-      </article>
-    </section>
-    <section class="tempUgrade" id="tempUpgrade">
-      <button class="tempup" id="tempup">Temporary Upgrade</button>
-    </section>
-    <section class="store" id="store">
-      <article class="storeTitle" id="storeTitle">
-        STORE TITLE
-      </article>
-      <section class="storeBuild" id="storeBuild">
-        <button class="store1" id="store1">
-          STORE1
-        </button>
-        <button class="store2" id="store2">
-          STORE2
-        </button>
-        <button class="store3" id="store3">
-          STORE3
-        </button>
-        <button class="store4" id="store4">
-          STORE4
-        </button>
-        <button class="store5" id="store5">
-          STORE5
-        </button>
-        <button class="store6" id="store6">
-          STORE6
-        </button>
+      <section class="clickUpgrade" id="clickUpgrade">
+        <section class="cookie" id="cookie">
+          <img src="./assets/img/ordiInput.png" class="cookbtn" id="cookbtn" alt="Code Clicker won't work without this image :(">  
+        </section>
+        <section class="store" id="store">
+            <button class="storeBtn store1" id="store1">
+            </button>
+            <button class="storeBtn store2" id=store2>
+            </button>
+            <button class="storeBtn store3" id="store3">
+            </button>
+            <button class="storeBtn store4" id="store4">
+            </button>
+            <button class="storeBtn store5" id="store5">
+            </button>
+            <button class="storeBtn store6" id="store6">
+            </button>
+        </section>
+        <section class="upgrade" id="upgrade">
+          <article class="build1" id="build1">
+          </article>
+          <article class="build2" id="build2">
+          </article>
+          <article class="build3" id="build3">
+          </article>
+          <article class="build4" id="build4">
+          </article>
+          <article class="build5" id=build5>
+          </article>
+          <article class="build6" id=build6>
+          </article>
+        </section>
       </section>
     </section>
-  </main>
-  <script src="./assets/js/script.js"></script>
-    </body>
+      <section class="tempUgrade" id="tempUpgrade">
+        <article><button class="tempup" id="tempup" >TEMPORARY BOOST</button></article>
+        <article><button class="trigger">ACHIEVEMENTS</button>
+          <div class="modal">
+              <div class="modal-content">
+                  <span class="close-button">&times;</span></br>
+                  <h1>Achievements</h1>
+                  <p id="firstAchievement">1. Locked</p>
+                  <p id="secondAchievement">2. Locked</p>
+                  <p id="thirdAchievement">3. Locked</p>
+                  <p id="fourthAchievement">4. Locked</p>
+                  <p id="fifthAchievement">5. Locked</p>
+                  <p id="sixthAchievement">6. Locked</p>
+                  <p id="seventhAchievement">7. Locked</p>
+                  <p id="eighthAchievement">8. Locked</p>
+                  <p id="ninthAchievement">9. Locked</p>
+                  <p id="tenthAchievement">10. Locked</p>
+              </div>
+          </div>
+        </article>
+        <article><button class="reset" id="reset">RESET</button></article>
+      </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
