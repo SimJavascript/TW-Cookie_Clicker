@@ -58,7 +58,7 @@ Create a clicker game following the multiple instructions
 * Pop-up window on hover with JS variables and DOM manipulation 
 
 ## Progress
-Work in progress
+PROJECT COMPLETED
 
 
 
