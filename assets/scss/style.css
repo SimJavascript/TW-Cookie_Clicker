@@ -1,0 +1,1066 @@
+body {
+  background-image: url(/assets/img/wallMobile.png);
+}
+
+body main {
+  max-width: 97vw;
+  max-height: 95vh;
+}
+
+body main #title {
+  text-align: center;
+  font-family: 'VT323', monospace;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+body main #scoreLineOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body main #scoreLineTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.8rem;
+  color: #52b4b3;
+}
+
+body main #scoreLineTwo article {
+  padding-left: 5vw;
+}
+
+body main #clickUpgrade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #clickUpgrade #cookie {
+  margin: 2vw 0;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #clickUpgrade #cookie #cookbtn {
+  width: 30vw;
+  height: auto;
+}
+
+body main #clickUpgrade #store {
+  border: 5px #a3a3a3 solid;
+  background: #261147;
+  border-radius: 10vw;
+  padding: 1vw 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 97vw;
+}
+
+body main #clickUpgrade #store .storeBtn {
+  width: 45vw;
+  margin: 2vw;
+  margin: 0.5vh 1vw;
+  border: none;
+  border-radius: 4vw;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'VT323', monospace;
+}
+
+body main #clickUpgrade #store .store1 {
+  background-image: url(/assets/img/field.png);
+  color: #000;
+}
+
+body main #clickUpgrade #store .store2 {
+  background-image: url(/assets/img/hills.png);
+}
+
+body main #clickUpgrade #store .store3 {
+  background-image: url(/assets/img/mountain.png);
+  color: #000;
+}
+
+body main #clickUpgrade #store .store4 {
+  background-image: url(/assets/img/dataCenter.png);
+}
+
+body main #clickUpgrade #store .store5 {
+  background-image: url(/assets/img/robotEnv.png);
+  color: #000;
+}
+
+body main #clickUpgrade #store .store6 {
+  background-image: url(/assets/img/abstract.png);
+}
+
+body main #clickUpgrade #upgrade {
+  width: 97vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 5px #a3a3a3 solid;
+  background: #261147;
+  padding-bottom: 3vw;
+  border-radius: 10vw;
+}
+
+body main #clickUpgrade #upgrade .build1 {
+  background-image: url(/assets/img/field.png);
+  border-radius: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  width: 94vw;
+  height: 4vh;
+  overflow: hidden;
+}
+
+body main #clickUpgrade #upgrade .build1 img {
+  width: 7vw;
+}
+
+body main #clickUpgrade #upgrade .build2 {
+  background-image: url(/assets/img/hills.png);
+  border-radius: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  width: 94vw;
+  height: 4vh;
+  overflow: hidden;
+}
+
+body main #clickUpgrade #upgrade .build2 img {
+  width: 6vw;
+}
+
+body main #clickUpgrade #upgrade .build3 {
+  background-image: url(/assets/img/mountain.png);
+  border-radius: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  width: 94vw;
+  height: 4vh;
+  overflow: hidden;
+}
+
+body main #clickUpgrade #upgrade .build3 img {
+  width: 7vw;
+}
+
+body main #clickUpgrade #upgrade .build4 {
+  background-image: url(/assets/img/dataCenter.png);
+  border-radius: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  width: 94vw;
+  height: 4vh;
+  overflow: hidden;
+}
+
+body main #clickUpgrade #upgrade .build4 img {
+  width: 6vw;
+}
+
+body main #clickUpgrade #upgrade .build5 {
+  background-image: url(/assets/img/robotEnv.png);
+  border-radius: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  width: 94vw;
+  height: 4vh;
+  overflow: hidden;
+}
+
+body main #clickUpgrade #upgrade .build5 img {
+  width: 4vw;
+}
+
+body main #clickUpgrade #upgrade .build6 {
+  background-image: url(/assets/img/abstract.png);
+  border-radius: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1vh;
+  padding-left: 1vw;
+  width: 94vw;
+  height: 4vh;
+  overflow: hidden;
+}
+
+body main #clickUpgrade #upgrade .build6 img {
+  width: 8vw;
+}
+
+body main #tempUpgrade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2vw;
+}
+
+body main #tempUpgrade #tempup {
+  height: 4vh;
+  border: none;
+  border-radius: 2vw;
+  background: #000;
+  color: #fff;
+}
+
+body main #tempUpgrade #reset {
+  margin-top: 2vw;
+  background: #fff;
+  height: 4vh;
+  border: none;
+  border-radius: 2vw;
+  color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(/assets/img/wallMobile.png);
+  }
+  body main #title {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  body main #scoreLineOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  body main #scoreLineTwo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    color: #52b4b3;
+  }
+  body main #scoreLineTwo article {
+    padding-left: 5vw;
+  }
+  body main #scoreLineTwo button {
+    border: none;
+    border-radius: 2vw;
+    font-size: 2rem;
+    font-family: 'VT323', monospace;
+    color: #fff;
+    background: #381579;
+    background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
+    width: 20vw;
+  }
+  body main #clickUpgrade {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main #clickUpgrade #cookie {
+    margin: 2vw 0;
+    width: 97vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main #clickUpgrade #cookie #cookbtn {
+    width: 25vw;
+    height: auto;
+  }
+  body main #clickUpgrade #store {
+    border: 5px #a3a3a3 solid;
+    background: #261147;
+    border-radius: 10vw;
+    padding: 2vw 0;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 95vw;
+  }
+  body main #clickUpgrade #store .storeBtn {
+    width: 40vw;
+    margin: 2vw;
+    margin: 0.5vh 1vw;
+    border: none;
+    border-radius: 1.5vw;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'VT323', monospace;
+  }
+  body main #clickUpgrade #store .store1 {
+    background-image: url(/assets/img/field.png);
+    color: #000;
+  }
+  body main #clickUpgrade #store .store2 {
+    background-image: url(/assets/img/hills.png);
+  }
+  body main #clickUpgrade #store .store3 {
+    background-image: url(/assets/img/mountain.png);
+    color: #000;
+  }
+  body main #clickUpgrade #store .store4 {
+    background-image: url(/assets/img/dataCenter.png);
+  }
+  body main #clickUpgrade #store .store5 {
+    background-image: url(/assets/img/robotEnv.png);
+    color: #000;
+  }
+  body main #clickUpgrade #store .store6 {
+    background-image: url(/assets/img/abstract.png);
+  }
+  body main #clickUpgrade #upgrade {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 5px #a3a3a3 solid;
+    background: #261147;
+    border-radius: 6vw;
+  }
+  body main #clickUpgrade #upgrade .build1 {
+    background-image: url(/assets/img/field.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 94vw;
+    height: 4vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build1 img {
+    width: 4vw;
+  }
+  body main #clickUpgrade #upgrade .build2 {
+    background-image: url(/assets/img/hills.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 94vw;
+    height: 4vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build2 img {
+    width: 3vw;
+  }
+  body main #clickUpgrade #upgrade .build3 {
+    background-image: url(/assets/img/mountain.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 94vw;
+    height: 4vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build3 img {
+    width: 4vw;
+  }
+  body main #clickUpgrade #upgrade .build4 {
+    background-image: url(/assets/img/dataCenter.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 94vw;
+    height: 4vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build4 img {
+    width: 4vw;
+  }
+  body main #clickUpgrade #upgrade .build5 {
+    background-image: url(/assets/img/robotEnv.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 94vw;
+    height: 4vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build5 img {
+    width: 4vw;
+  }
+  body main #clickUpgrade #upgrade .build6 {
+    background-image: url(/assets/img/abstract.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 94vw;
+    height: 4vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build6 img {
+    width: 5vw;
+  }
+  body main #tempUpgrade {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2vw;
+  }
+  body main #tempUpgrade #tempup {
+    height: 4vh;
+    border: none;
+    border-radius: 2vw;
+    background: #000;
+    color: #fff;
+  }
+  body main #tempUpgrade #reset {
+    margin-top: 2vw;
+    background: #fff;
+    height: 4vh;
+    border: none;
+    border-radius: 2vw;
+    color: red;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background: none;
+  }
+  body main #title {
+    background: #381579;
+    background: linear-gradient(200deg, #381579 0%, #090979 35%, #e83d4e 100%);
+    border-radius: 4vw;
+    border: 5px #a3a3a3 solid;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: #fff;
+    font-size: 4rem;
+  }
+  body main #scoreLineOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: #381579;
+    font-size: 3rem;
+  }
+  body main #scoreLineTwo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 3rem;
+    color: #e83d4e;
+    margin-bottom: 2vh;
+  }
+  body main #scoreLineTwo article {
+    padding-left: 4vw;
+  }
+  body main #scoreLineTwo button {
+    border: none;
+    border-radius: 2vw;
+    font-size: 2rem;
+    font-family: 'VT323', monospace;
+    color: #fff;
+    background: #381579;
+    background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
+    width: 20vw;
+  }
+  body main #clickUpgrade {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main #clickUpgrade #cookie {
+    margin: 2vw 2vw 0 0;
+    padding-top: 2vw;
+    width: 30vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #381579;
+    background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
+    border-radius: 30vw;
+    border: 5px #a3a3a3 solid;
+  }
+  body main #clickUpgrade #cookie #cookbtn {
+    width: 20vw;
+    height: auto;
+  }
+  body main #clickUpgrade #store {
+    border: 5px #a3a3a3 solid;
+    background: #381579;
+    background: linear-gradient(191deg, #381579 0%, #090979 35%, #e83d4e 100%);
+    border-radius: 5vw;
+    padding: 2vw 0;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 20vw;
+  }
+  body main #clickUpgrade #store .storeBtn {
+    width: 18vw;
+    height: 4vh;
+    border: none;
+    border-radius: 1.5vw;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'VT323', monospace;
+  }
+  body main #clickUpgrade #store .store1 {
+    background-image: url(/assets/img/field.png);
+    color: #000;
+  }
+  body main #clickUpgrade #store .store2 {
+    background-image: url(/assets/img/hills.png);
+  }
+  body main #clickUpgrade #store .store3 {
+    background-image: url(/assets/img/mountain.png);
+    color: #000;
+  }
+  body main #clickUpgrade #store .store4 {
+    background-image: url(/assets/img/dataCenter.png);
+  }
+  body main #clickUpgrade #store .store5 {
+    background-image: url(/assets/img/robotEnv.png);
+    color: #000;
+  }
+  body main #clickUpgrade #store .store6 {
+    background-image: url(/assets/img/abstract.png);
+  }
+  body main #clickUpgrade #upgrade {
+    width: 45vw;
+    height: 35vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 5px #a3a3a3 solid;
+    background: #381579;
+    background: linear-gradient(164deg, #381579 0%, #090979 35%, #e83d4e 100%);
+    border-radius: 4vw;
+  }
+  body main #clickUpgrade #upgrade .build1 {
+    background-image: url(/assets/img/field.png);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 3.8vh;
+    padding-left: 1vw;
+    width: 38vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build1 img {
+    width: 2.5vw;
+  }
+  body main #clickUpgrade #upgrade .build2 {
+    background-image: url(/assets/img/hills.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 38vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build2 img {
+    width: 2vw;
+  }
+  body main #clickUpgrade #upgrade .build3 {
+    background-image: url(/assets/img/mountain.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 38vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build3 img {
+    width: 2vw;
+  }
+  body main #clickUpgrade #upgrade .build4 {
+    background-image: url(/assets/img/dataCenter.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 38vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build4 img {
+    width: 2vw;
+  }
+  body main #clickUpgrade #upgrade .build5 {
+    background-image: url(/assets/img/robotEnv.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 38vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build5 img {
+    width: 1.2vw;
+  }
+  body main #clickUpgrade #upgrade .build6 {
+    background-image: url(/assets/img/abstract.png);
+    border-radius: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    width: 38vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+  body main #clickUpgrade #upgrade .build6 img {
+    width: 2vw;
+  }
+  body main #tempUpgrade {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2vw;
+  }
+  body main #tempUpgrade #tempup {
+    height: 4vh;
+    border: none;
+    border-radius: 2vw;
+    background: #381579;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: #fff;
+  }
+  body main #tempUpgrade #reset {
+    margin-top: 2vw;
+    background: #e83d4e;
+    height: 4vh;
+    border: none;
+    border-radius: 2vw;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: #fff;
+  }
+}
+/*# sourceMappingURL=style.css.map */
