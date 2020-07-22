@@ -444,10 +444,10 @@ if(localStorage.getItem('dwarfs', dwarfs) >= 1){
     document.getElementById('thirdAchievement').innerHTML = "3. Unlock an Angry Dwarf";
 }
 if(localStorage.getItem('hackers', hackers) >= 1){
-    document.getElementById('fourthAchievement').innerHTML = "4. Unlock an Hacker";
+    document.getElementById('fourthAchievement').innerHTML = "4. Unlock a Hacker";
 }
 if(localStorage.getItem('robots', robots) >= 1){
-    document.getElementById('fifthAchievement').innerHTML = "5. Unlock an Mr robot";
+    document.getElementById('fifthAchievement').innerHTML = "5. Unlock a Mr robot";
 }
 if(localStorage.getItem('torvalds', torvalds) >= 1){
     document.getElementById('sixthAchievement').innerHTML = "6. Unlock a Torvald";
