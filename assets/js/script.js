@@ -43,6 +43,10 @@ let isBonusActive = false;
 
 let bonusPrice = 100;
 
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".trigger");
+var closeButton = document.querySelector(".close-button");
+
 // SAVING DATA
 window.onunload = () => { saveData(); }; // Save data when user leave the game
 document.getElementById('reset').onclick = () => { resetData(); update(); }; // Reset data
@@ -149,6 +153,7 @@ function update() { // Update the page with localStorage on page load.
             robotsCost = 1000;
             torvalds = 0;
             torvaldsCost = 50000;
+            alerted = "no";
         }
     }
     function displayOnLoad() { // Display the elements innerHTML.
@@ -211,6 +216,7 @@ function resetData() { // Reset all the data and reload the page.
     robotsCost = 1000;
     torvalds = 0;
     torvaldsCost = 50000;
+    alerted = "no";
     saveData();
     location.reload();
 }
@@ -393,7 +399,7 @@ function startBonus() {
             timeBonus--;
             document.getElementById('tempup').innerHTML = `+200% BONUS POWER | Time left : ${timeBonus}`;
             document.getElementById('tempup').style.backgroundColor = "rgba(240, 123, 48, 1)";
-            
+
 
             if (timeBonus == 0) {
                 multiplier /= 3;
@@ -412,3 +418,65 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min +1)) + min;
   }
+
+// Modal&achievement
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+if(localStorage.getItem('cows', cows) >= 1){
+    document.getElementById('firstAchievement').innerHTML = "1. Unlock a Chill Cow";
+}
+if(localStorage.getItem('lutins', lutins) >= 1){
+    document.getElementById('secondAchievement').innerHTML = "2. Unlock a Lucky Lutin";
+}
+if(localStorage.getItem('dwarfs', dwarfs) >= 1){
+    document.getElementById('thirdAchievement').innerHTML = "3. Unlock an Angry Dwarf";
+}
+if(localStorage.getItem('hackers', hackers) >= 1){
+    document.getElementById('fourthAchievement').innerHTML = "4. Unlock an Hacker";
+}
+if(localStorage.getItem('robots', robots) >= 1){
+    document.getElementById('fifthAchievement').innerHTML = "5. Unlock an Mr robot";
+}
+if(localStorage.getItem('torvalds', torvalds) >= 1){
+    document.getElementById('sixthAchievement').innerHTML = "6. Unlock a Torvald";
+}
+
+if(localStorage.getItem('cows', cows) >= 5 && 
+    localStorage.getItem('lutins', lutins) >= 5 &&
+    localStorage.getItem('dwarfs', dwarfs) >= 5 &&
+    localStorage.getItem('hackers', hackers) >= 5 &&
+    localStorage.getItem('robots', robots) >= 5 &&
+    localStorage.getItem('torvalds', torvalds) >= 5){
+        document.getElementById('seventhAchievement').innerHTML = "7. Unlock 5 of each character";
+}
+if(localStorage.getItem('cows', cows) >= 10 && 
+    localStorage.getItem('lutins', lutins) >= 10 &&
+    localStorage.getItem('dwarfs', dwarfs) >= 10 &&
+    localStorage.getItem('hackers', hackers) >= 10 &&
+    localStorage.getItem('robots', robots) >= 10 &&
+    localStorage.getItem('torvalds', torvalds) >= 10){
+        document.getElementById('eighthAchievement').innerHTML = "8. Unlock 10 of each character";
+}
+if(localStorage.getItem('cows', cows) >= 50 && 
+    localStorage.getItem('lutins', lutins) >= 50 &&
+    localStorage.getItem('dwarfs', dwarfs) >= 50 &&
+    localStorage.getItem('hackers', hackers) >= 50 &&
+    localStorage.getItem('robots', robots) >= 50 &&
+    localStorage.getItem('torvalds', torvalds) >= 50){
+        document.getElementById('ninthAchievement').innerHTML = "9. Unlock 50 of each character";
+}
+if(localStorage.getItem('torvalds', torvalds) >= 100){
+    document.getElementById('tenthAchievement').innerHTML = "10. Unlock 100 Torvalds!!!!!!";
+}

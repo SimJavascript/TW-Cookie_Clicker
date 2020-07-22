@@ -288,11 +288,72 @@ body {
       #reset:hover {
         background: rgba(232, 61, 78, 0.5);
       }
+      #achievement {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        background: rgba(232, 61, 78, 1);
+        height: 4vh;
+        border: none;
+        border-radius: 2vw;
+        font-family: 'VT323', monospace;
+        font-size: 2rem;
+        color: #fff;
+    }
+    .modal {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1.1);
+      transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    }
+    .modal-content {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 1rem 1.5rem;
+      width: 24rem;
+      border-radius: 0.5rem;
+    }
+    .close-button {
+      float: right;
+      width: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      background-color: lightgray;
+    }
+    .close-button:hover {
+      background-color: darkgray;
+    }
+    .show-modal {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1.0);
+      transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }    
+    .trigger {
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+      background: rgba(232, 61, 78, 1);
+      height: 4vh;
+      border: none;
+      border-radius: 2vw;
+      font-family: 'VT323', monospace;
+      font-size: 2rem;
+      color: #fff; 
+    }
     }
   }
 }
-
-
 
 
 // MEDIA QUERIES
@@ -523,6 +584,17 @@ body {
         #reset:hover {
           background: rgba(232, 61, 78, 0.5);
         }
+        #achievement {
+          margin-top: 2vh;
+          margin-bottom: 2vh;
+          background: rgba(232, 61, 78, 1);
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          font-family: 'VT323', monospace;
+          font-size: 2rem;
+          color: #fff;
+      }
       }
     }
   }
@@ -755,6 +827,8 @@ body {
         margin-top: 2vw;
         
         #tempup {
+          margin-top: 2vh;
+          margin-bottom: 2vh;
           height: 4vh;
           border: none;
           border-radius: 2vw;
@@ -767,7 +841,8 @@ body {
           background: rgba(187, 148, 248, 0.5);
         }
         #reset {
-          margin-top: 2vw;
+          margin-top: 2vh;
+          margin-bottom: 2vh;
           background: rgba(232, 61, 78, 1);
           height: 4vh;
           border: none;
@@ -779,9 +854,18 @@ body {
         #reset:hover {
           background: rgba(232, 61, 78, 0.5);
         }
+        #achievement {
+          margin-top: 2vh;
+          margin-bottom: 2vh;
+          background: rgba(232, 61, 78, 1);
+          height: 4vh;
+          border: none;
+          border-radius: 2vw;
+          font-family: 'VT323', monospace;
+          font-size: 2rem;
+          color: #fff;
       }
+    } 
     }
   }
 }
-
-
