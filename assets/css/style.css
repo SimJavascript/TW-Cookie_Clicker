@@ -303,6 +303,58 @@ body {
 @media only screen and (min-width: 768px) {
   body {
     background-image: url(/assets/img/wallMobile.png); }
+    body main #title {
+      text-align: center;
+      font-family: 'VT323', monospace;
+      color: #fff;
+      font-size: 2.5rem; }
+    body main #scoreLineOne {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      color: #fff;
+      font-size: 1.5rem; }
+    body main #scoreLineTwo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      font-size: 1.8rem;
+      color: #52b4b3; }
+      body main #scoreLineTwo article {
+        padding-left: 5vw; }
+      body main #scoreLineTwo button {
+        border: none;
+        border-radius: 2vw;
+        font-size: 2rem;
+        font-family: 'VT323', monospace;
+        color: #fff;
+        background: #381579;
+        background: linear-gradient(185deg, #381579 0%, #090979 35%, #e83d4e 100%);
+        width: 20vw; }
     body main #clickUpgrade {
       display: -webkit-box;
       display: -ms-flexbox;
