@@ -1,3 +1,63 @@
+
+// Glow
+@mixin glowHover {
+  .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  .glow-on-hover:active {
+    color: #000
+  }
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+}
+
+
+
+
 // Mobile-First Layout
 body {
   background-image: url(/assets/img/wallMobile.png);
@@ -82,6 +142,7 @@ body {
           font-family: 'VT323', monospace;
         }
         .store1 {
+          @include glowHover;
           background-image: url(/assets/img/field.png);
           color: #000;
         }
@@ -245,6 +306,8 @@ body {
   body {
     background-image: url(/assets/img/wallMobile.png);
     main {
+      max-width: 100vw;
+      max-height: 100vh;
       #title {
         text-align: center;
         font-family: 'VT323', monospace;
@@ -482,14 +545,12 @@ body {
   body {
     background: none;
     main {
+      max-width: 100vw;
+      max-height: 100vh;
       #title {
-        background: rgba(56, 21, 121, 1);
-        background: linear-gradient(200deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
-        border-radius: 4vw;
-        border: 5px rgba(163, 163, 163, 1) solid;
         text-align: center;
         font-family: 'VT323', monospace;
-        color: #fff;
+        color: #000;
         font-size: 4rem;
       }
       #scoreLineOne{
@@ -539,15 +600,13 @@ body {
           justify-content: center;
           align-items: center;
           #cookbtn {
-            width: 20vw;
+            width: 15vw;
             height: auto;
           }
         }
         #store {
-          border: 5px rgba(163, 163, 163, 1) solid;
-          background: rgba(56, 21, 121, 1);
-          background: linear-gradient(191deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
-          border-radius: 5vw;
+          background: none;
+          border: none;
           padding: 2vw 0;
           text-align: center;
           display: flex;
@@ -566,8 +625,9 @@ body {
             font-family: 'VT323', monospace;
           }
           .store1 {
-            background-image: url(/assets/img/field.png);
-            color: #000;
+            @include glowHover;
+            // background-image: url(/assets/img/field.png);
+            // color: #000;
           }
           .store2 {
             background-image: url(/assets/img/hills.png);
@@ -594,10 +654,8 @@ body {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          border: 5px rgba(163, 163, 163, 1) solid;
-          background: rgba(56, 21, 121, 1);
-          background: linear-gradient(164deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
-          border-radius: 4vw;
+          background: none;
+          border: none;
           .build1 {
             background-image: url(/assets/img/field.png);
             display: flex;
@@ -725,6 +783,5 @@ body {
     }
   }
 }
-
 
 
