@@ -431,38 +431,87 @@ body {
   body {
     background: none;
     main {
+      #title {
+        background: rgba(56, 21, 121, 1);
+        background: linear-gradient(200deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
+        border-radius: 4vw;
+        border: 5px rgba(163, 163, 163, 1) solid;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        color: #fff;
+        font-size: 4rem;
+      }
+      #scoreLineOne{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        color: rgba(56, 21, 121, 1);
+        font-size: 3rem;
+      }
+      #scoreLineTwo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        font-family: 'VT323', monospace;
+        font-size: 3rem;
+        color: rgba(232, 61, 78, 1);
+        margin-bottom: 2vh;
+        article {
+          padding-left: 4vw;
+        }
+        button {
+          border: none;
+          border-radius: 2vw;
+          font-size: 2rem;
+          font-family: 'VT323', monospace;
+          color: #fff;
+          background: rgba(56, 21, 121, 1);
+          background: linear-gradient(185deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
+          width: 20vw;
+        }
+      }
       #clickUpgrade {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         #cookie {
-          margin: 2vw 0;
-          width: 40vw;
+          margin: 2vw 2vw 0 0;
+          padding-top: 2vw;
+          width: 30vw;
           display: flex;
           justify-content: center;
           align-items: center;
+          background: rgba(56, 21, 121, 1);
+          background: linear-gradient(185deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
+          border-radius: 30vw;
+          border: 5px rgba(163, 163, 163, 1) solid;
           #cookbtn {
-            width: 25vw;
+            width: 20vw;
             height: auto;
           }
         }
         #store {
           border: 5px rgba(163, 163, 163, 1) solid;
-          background: rgba(38, 17, 71, 1);
-          border-radius: 10vw;
+          background: rgba(56, 21, 121, 1);
+          background: linear-gradient(191deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
+          border-radius: 5vw;
           padding: 2vw 0;
           text-align: center;
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
-          width: 60vw;
+          width: 20vw;
           .storeBtn {
-            width: 40vw;
-            margin: 2vw;
-            margin: 0.5vh 1vw;
+            width: 18vw;
+            height: 4vh;
             border: none;
             border-radius: 1.5vw;
             color: #fff;
@@ -492,28 +541,29 @@ body {
           }
         }
         #upgrade {
-          width: 20vw;
+          width: 45vw;
+          height: 35vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           border: 5px rgba(163, 163, 163, 1) solid;
-          background: rgba(38, 17, 71, 1);
-          border-radius: 6vw;
+          background: rgba(56, 21, 121, 1);
+          background: linear-gradient(164deg, rgba(56, 21, 121, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(232, 61, 78, 1) 100%);
+          border-radius: 4vw;
           .build1 {
             background-image: url(/assets/img/field.png);
-            border-radius: 1.2rem;
             display: flex;
             flex-direction: row;
             align-items: flex-start;
             flex-wrap: wrap;
-            margin-top: 1vh;
+            margin-top: 3.8vh;
             padding-left: 1vw;
-            width: 94vw;
-            height: 4vh;
+            width: 38vw;
+            height: 10vh;
             overflow: hidden;
               img {
-              width: 4vw;
+              width: 2.5vw;
             }
           }
           .build2 {
@@ -525,11 +575,11 @@ body {
             flex-wrap: wrap;
             margin-top: 1vh;
             padding-left: 1vw;
-            width: 94vw;
-            height: 4vh;
+            width: 38vw;
+            height: 10vh;
             overflow: hidden;
               img {
-              width: 3vw;
+              width: 2vw;
             }
           }
           .build3 {
@@ -541,11 +591,11 @@ body {
             flex-wrap: wrap;
             margin-top: 1vh;
             padding-left: 1vw;
-            width: 94vw;
-            height: 4vh;
+            width: 38vw;
+            height: 10vh;
             overflow: hidden;
               img {
-              width: 4vw;
+              width: 2vw;
             }
           }
           .build4 {
@@ -557,11 +607,11 @@ body {
             flex-wrap: wrap;
             margin-top: 1vh;
             padding-left: 1vw;
-            width: 94vw;
-            height: 4vh;
+            width: 38vw;
+            height: 10vh;
             overflow: hidden;
               img {
-              width: 4vw;
+              width: 2vw;
             }
           }
           .build5 {
@@ -573,11 +623,11 @@ body {
             flex-wrap: wrap;
             margin-top: 1vh;
             padding-left: 1vw;
-            width: 94vw;
-            height: 4vh;
+            width: 38vw;
+            height: 10vh;
             overflow: hidden;
               img {
-              width: 4vw;
+              width: 1.2vw;
             }
           }
           .build6 {
@@ -589,8 +639,8 @@ body {
             flex-wrap: wrap;
             margin-top: 1vh;
             padding-left: 1vw;
-            width: 94vw;
-            height: 4vh;
+            width: 38vw;
+            height: 10vh;
             overflow: hidden;
               img {
               width: 5vw;
@@ -604,20 +654,25 @@ body {
         justify-content: space-around;
         align-items: center;
         margin-top: 2vw;
+        
         #tempup {
           height: 4vh;
           border: none;
           border-radius: 2vw;
-          background: #000;
+          background: rgba(56, 21, 121, 1);
+          font-family: 'VT323', monospace;
+          font-size: 2rem;
           color:#fff;
         }
         #reset {
           margin-top: 2vw;
-          background: #fff;
+          background: rgba(232, 61, 78, 1);
           height: 4vh;
           border: none;
           border-radius: 2vw;
-          color: red;
+          font-family: 'VT323', monospace;
+          font-size: 2rem;
+          color: #fff;
         }
       }
     }
