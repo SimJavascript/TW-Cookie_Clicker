@@ -120,7 +120,7 @@ torvaldTarget.addEventListener('click', () => { // Onclick store 3 (robot).
     if (score >= torvaldsCost && isBonusActive == false) { // Check if the player has enough score to buy the Torvald.
         torvalds++;
         score -= torvaldsCost;
-        robotsCost += torvaldsCost / 5;
+        torvaldsCost += torvaldsCost / 5;
         location.reload();
     }
 })
