@@ -385,8 +385,8 @@ function startBonus() {
     if (timeBonus == 10) {
         let bonus = setInterval(countDown, 1000);
         multiplier *= 3;
-        document.body.style.backgroundImage = "url('https://media2.giphy.com/media/gJijhzjTV2pCn2SePc/source.gif')";
-        document.body.style.backgroundRepeat = "repeat-y";
+        document.getElementById('clickUpgrade').style.backgroundImage = "url('https://media2.giphy.com/media/gJijhzjTV2pCn2SePc/source.gif')";
+        document.getElementById('clickUpgrade').style.backgroundImage = "repeat-y";
 
         function countDown() {
 
@@ -401,7 +401,7 @@ function startBonus() {
                 isBonusActive = false;
                 document.getElementById('tempup').innerHTML = `BONUS 200%/clic | Cost: ${bonusPrice}`;
                 document.getElementById('tempup').style.backgroundColor = "rgba(41, 22, 121, 1)";
-                document.body.style.backgroundImage = "";
+                document.getElementById('clickUpgrade').style.backgroundImage = "";
             }
         }
     }
