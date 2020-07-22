@@ -281,11 +281,7 @@ function showCows() { // Show when the user can buy the item and his price
 
 function showLutins() { // Show when the user can buy the item and his price
     if (lutins > 0 || score > lutinsCost) {
-        if(score > lutinsCost){
-            return document.getElementById('store2').innerHTML = `+1 Lucky Lutin (-${lutinsCost})`
-        } else {
-            
-        }
+        return document.getElementById('store2').innerHTML = `+1 Lucky Lutin (-${lutinsCost})`
     } else {
         return document.getElementById('store2').innerHTML = `???`
     }
