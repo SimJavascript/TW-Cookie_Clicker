@@ -41,6 +41,8 @@ let torvald;
 let timeBonus = 10;
 let isBonusActive = false;
 
+let bonusPrice = 500;
+
 // SAVING DATA
 window.onunload = () => { saveData(); }; // Save data when user leave the game
 document.getElementById('reset').onclick = () => { resetData(); update(); }; // Reset data
@@ -49,7 +51,11 @@ update(); // Update the page with localStorage.
 cookie.addEventListener('click', () => {  // Onclick Cookie
     showScore();
     saveData();                           // Save data on each click
+    showBonus();
+
 })
+
+
 buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
     if (score >= multiplierPrice && isBonusActive == false) { // Check if the player has enough score to buy the multiplier.
         score -= multiplierPrice;
@@ -59,8 +65,8 @@ buttonMultiplier.addEventListener('click', () => {  // Onclick Multiplier
     }
 })
 document.getElementById('tempup').addEventListener('click', () => {  // Onclick Bonus
-    if (score >= 200 && isBonusActive == false) { // Check if the player has enough score to buy the bonus.
-        score -= 200;
+    if (score >= bonusPrice && isBonusActive == false) { // Check if the player has enough score to buy the bonus.
+        score -= bonusPrice;
         startBonus();
     }
 })
@@ -154,6 +160,14 @@ function update() { // Update the page with localStorage on page load.
         document.getElementById('store4').innerHTML = showHackers();
         document.getElementById('store5').innerHTML = showRobots();
         document.getElementById('store6').innerHTML = showTorvalds();
+
+        document.getElementById('tempup').innerHTML = showBonus();
+        
+
+   
+
+   
+
     }
 }
 
@@ -251,6 +265,7 @@ function showAvailableUpgrade() {
     showHackers();
     showRobots();
     showTorvalds();
+    
 }
 
 function showCows() { // Show when the user can buy the item and his price
@@ -299,6 +314,16 @@ function showTorvalds() { // Show when the user can buy the item and his price
     } else {
         return document.getElementById('store6').innerHTML = `???`
     }
+}
+
+function showBonus() {
+   
+    if (score > bonusPrice) {
+        return document.getElementById('tempup').innerHTML = `BONUS 200%/clic | Cost: ${bonusPrice}`;
+    } else {
+        return document.getElementById('tempup').innerHTML = `???`
+    }
+    
 }
 
 function displayBuild() { // Add the item img to the build.
@@ -365,6 +390,8 @@ function startBonus() {
     if (timeBonus == 10) {
         let bonus = setInterval(countDown, 1000);
         multiplier *= 3;
+        document.body.style.backgroundImage = "url('https://media2.giphy.com/media/gJijhzjTV2pCn2SePc/source.gif')";
+        document.body.style.backgroundRepeat = "repeat-y";
 
         function countDown() {
 
@@ -377,9 +404,16 @@ function startBonus() {
                 multiplier /= 3;
                 clearInterval(bonus);
                 isBonusActive = false;
-                document.getElementById('tempup').innerHTML = `BONUS 200%/clic | Cost: 500`;
+                document.getElementById('tempup').innerHTML = `BONUS 200%/clic | Cost: ${bonusPrice}`;
                 document.getElementById('tempup').style.backgroundColor = "rgba(41, 22, 121, 1)";
+                document.body.style.backgroundImage = "";
             }
         }
     }
 }
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min +1)) + min;
+  }
