@@ -32,12 +32,30 @@ Give maximum to get maximum :rocket:
 [Nicolas Denoël](https://github.com/nicode-be/) 
 
 ### The Mission: 
-* Create a clicker game
+Create a clicker game following the multiple instructions
 
 ### Main goals:
 * Upgrade JavaScript skill
 * Upgrade HTML/SCSS skill
 * Upgrade git conflict's resolution's skill
+
+### Achievements:
+* Scoring 
+* Auto-clicker
+* Multiple Characters
+* Temporary Bonus
+* Exponential cost augmentation
+* Achievements
+* Reset button
+* Visual character's add
+* Button effects
+* Fire effect (on temporary's bonus activation)
+
+### What we won't miss for next project :
+* OOP thinking (here for characters for example)
+* GRID layout to be more agile with changing
+* SCSS variables and mixins, whatever the size project is
+* Pop-up window on hover with JS variables and DOM manipulation 
 
 ## Progress
 Work in progress
