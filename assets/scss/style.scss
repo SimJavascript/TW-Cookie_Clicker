@@ -61,6 +61,7 @@
 }
 
 
+
 // Mobile-First Layout
 body {
   background-image: url(/assets/img/wallMobile.png);
@@ -317,7 +318,11 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: white;
+      background-color: #414562;
+      font-family: 'VT323', monospace;
+      border: black 3px solid;
+      font-size: 1.7rem;
+      color: white;
       padding: 1rem 1.5rem;
       width: 24rem;
       border-radius: 0.5rem;
@@ -329,7 +334,9 @@ body {
       text-align: center;
       cursor: pointer;
       border-radius: 0.25rem;
-      background-color: lightgray;
+      color: black;
+      background-color: rgba(187, 148, 248, 1);
+      border: 3px black solid;
     }
     .close-button:hover {
       background-color: darkgray;
