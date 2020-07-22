@@ -41,7 +41,7 @@ let torvald;
 let timeBonus = 10;
 let isBonusActive = false;
 
-let bonusPrice = 500;
+let bonusPrice = 100;
 
 // SAVING DATA
 window.onunload = () => { saveData(); }; // Save data when user leave the game
@@ -51,7 +51,7 @@ update(); // Update the page with localStorage.
 cookie.addEventListener('click', () => {  // Onclick Cookie
     showScore();
     saveData();                           // Save data on each click
-    showBonus();
+    
 
 })
 
@@ -161,12 +161,7 @@ function update() { // Update the page with localStorage on page load.
         document.getElementById('store5').innerHTML = showRobots();
         document.getElementById('store6').innerHTML = showTorvalds();
 
-        document.getElementById('tempup').innerHTML = showBonus();
-        
-
-   
-
-   
+        showBonus();
 
     }
 }
@@ -174,6 +169,7 @@ function update() { // Update the page with localStorage on page load.
 function showScore() { // Show score on innerHTML
     affichageSCore.innerHTML = score = score + (1 * multiplier);
     showAvailableUpgrade();
+    
 }
 
 function showMultiplier() { // Affichage du multiplicateur.
@@ -265,6 +261,7 @@ function showAvailableUpgrade() {
     showHackers();
     showRobots();
     showTorvalds();
+    showBonus();
     
 }
 
@@ -318,11 +315,9 @@ function showTorvalds() { // Show when the user can buy the item and his price
 
 function showBonus() {
    
-    if (score > bonusPrice) {
+    if (score > bonusPrice && isBonusActive == false) {
         return document.getElementById('tempup').innerHTML = `BONUS 200%/clic | Cost: ${bonusPrice}`;
-    } else {
-        return document.getElementById('tempup').innerHTML = `???`
-    }
+    } 
     
 }
 
