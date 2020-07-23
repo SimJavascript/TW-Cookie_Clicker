@@ -273,7 +273,7 @@ function showAvailableUpgrade() {
 
 function showCows() { // Show when the user can buy the item and his price
     if (cows > 0 || score > cowsCost) {
-        return document.getElementById('store1').innerHTML = `+1 Chill Cow (-${cowsCost})`
+        return document.getElementById('store1').innerHTML = `+1 Chill Cow (-${cowsCost}) (${cows})`
     } else {
         return document.getElementById('store1').innerHTML = `???`
     }
@@ -281,7 +281,7 @@ function showCows() { // Show when the user can buy the item and his price
 
 function showLutins() { // Show when the user can buy the item and his price
     if (lutins > 0 || score > lutinsCost) {
-        return document.getElementById('store2').innerHTML = `+1 Lucky Lutin (-${lutinsCost})`
+        return document.getElementById('store2').innerHTML = `+1 Lucky Lutin (-${lutinsCost}) (${lutins})`
     } else {
         return document.getElementById('store2').innerHTML = `???`
     }
@@ -289,7 +289,7 @@ function showLutins() { // Show when the user can buy the item and his price
 
 function showDwarfs() { // Show when the user can buy the item and his price
     if (dwarfs > 0 || score > dwarfsCost) {
-        return document.getElementById('store3').innerHTML = `+1 Angry Dwarf (-${dwarfsCost})`
+        return document.getElementById('store3').innerHTML = `+1 Angry Dwarf (-${dwarfsCost}) (${dwarfs})`
     } else {
         return document.getElementById('store3').innerHTML = `???`
     }
@@ -297,7 +297,7 @@ function showDwarfs() { // Show when the user can buy the item and his price
 
 function showHackers() { // Show when the user can buy the item and his price
     if (hackers > 0 || score > hackersCost) {
-        return document.getElementById('store4').innerHTML = `+1 Hacker (-${hackersCost})`
+        return document.getElementById('store4').innerHTML = `+1 Hacker (-${hackersCost}) (${hackers})`
     } else {
         return document.getElementById('store4').innerHTML = `???`
     }
@@ -305,7 +305,7 @@ function showHackers() { // Show when the user can buy the item and his price
 
 function showRobots() { // Show when the user can buy the item and his price
     if (robots > 0 || score > robotsCost) {
-        return document.getElementById('store5').innerHTML = `+1 Mr Robot (-${robotsCost})`
+        return document.getElementById('store5').innerHTML = `+1 Mr Robot (-${robotsCost}) (${robots})`
     } else {
         return document.getElementById('store5').innerHTML = `???`
     }
@@ -313,7 +313,7 @@ function showRobots() { // Show when the user can buy the item and his price
 
 function showTorvalds() { // Show when the user can buy the item and his price
     if (torvalds > 0 || score > torvaldsCost) {
-        return document.getElementById('store6').innerHTML = `+1 Torvald (-${torvaldsCost})`
+        return document.getElementById('store6').innerHTML = `+1 Torvald (-${torvaldsCost}) (${torvalds})`
     } else {
         return document.getElementById('store6').innerHTML = `???`
     }
