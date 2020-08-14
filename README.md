@@ -1,7 +1,11 @@
-# TeamWork (TW) - Cookie clicker 
+# COOKIE CLICKER
+> Learning project using HMTL/CSS/JS
 
-### The Clicker Game 
-In a clicker game your objective is to generate a maximum of points via your clicks, the automatic clicks and the various bonuses.
+## Collaborators
+:star:[Calvin Jitnaree](https://github.com/Calvin781)  
+:star:[Simon Duquaine](https://github.com/simonduquaine)  
+:star:[Albert Ndizeye](https://github.com/AlbertNd)  
+:star:[Nicolas Denoël](https://github.com/nicode-be/) 
 
 ### How to play 
 1.  Start clicking the computer to generate 1 point per click, clicks are great sometimes even for a coder
@@ -10,36 +14,22 @@ In a clicker game your objective is to generate a maximum of points via your cli
 4.  Don't push the reset button if you don't want to loose your precious points.
 5.  Discover all bonuses and characters, they're all friendly... Some are friendly
 
+## Index
+- [Description](#description) 
+- [Achievements](#achievements)
+- [Collaboration](#collaboration)
+- [Timeline](#timeline)
 
-### When : 
-From:  **20-07-2020**
-To:  **22-07-2020**
 
-### Where : 
-**BeCode A6K-E6K** 
-Square des martyrs 
-1 c/o A6K, 6000 Charleroi
+### Description 
+> Start 20-07-2020
 
-### Why :
-**BeCode** Web Developer Training  
-In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is in da house !
-Give maximum to get maximum :rocket:
+In a clicker game your objective is to generate a maximum of points via your clicks, the automatic clicks and the various bonuses. 
 
-## Collaborators
-[Calvin Jitnaree](https://github.com/Calvin781)  
-[Simon Duquaine](https://github.com/simonduquaine)  
-[Albert Ndizeye](https://github.com/AlbertNd)  
-[Nicolas Denoël](https://github.com/nicode-be/) 
-
-### The Mission: 
-Create a clicker game following the multiple instructions
-
-### Main goals:
+### Achievements 
 * Upgrade JavaScript skill
 * Upgrade HTML/SCSS skill
-* Upgrade git conflict's resolution's skill
-
-### Achievements:
+* Manage Git conflicts using GitKraken
 * Scoring 
 * Auto-clicker
 * Multiple Characters
@@ -51,15 +41,25 @@ Create a clicker game following the multiple instructions
 * Button effects
 * Fire effect (on temporary's bonus activation)
 
-### What we won't miss for next project :
-* OOP thinking (here for characters for example)
-* GRID layout to be more agile with changing
-* SCSS variables and mixins, whatever the size project is
-* Pop-up window on hover with JS variables and DOM manipulation 
+---
+**BeCode** Web Developer Training  
+This project took place in my leearning path in BeCode (see below) to full stack web developer.
+In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
+Give maximum to get maximum :rocket:
 
-## Progress
-PROJECT COMPLETED
+### Timeline 
+[Discover the great timeline of my adventure to become a developer :calendar: Want to write your company name on it ? See collaboration section ;)](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
+### Collaboration
+Hello, I'm [Nicolas](https://www.linkedin.com/in/nicolas-denoel/), welcome to my all new life as developer.
+After 15 years as manager and sales director it's time for me to make my dreams come true and to become a developer.
+Autonomous learner, problem solver and commited team member, I'm ready for challenges !
+So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
+If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me to check if we can share a project together !  
+Thanks by advance for that :heart:  
+
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 
 
